@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  27 NOV 2016 11:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  27 NOV 2016 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -156,12 +156,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2
 
 ] [3] [4] [5]
+Missing character: There is no Â in font cmr10!
+Missing character: There is no ® in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no „ in font cmr10!
+Missing character: There is no ¢ in font cmr10!
+
 [6] [7] [8] [9] (./seminar_paper.aux) ) 
 Here is how much of TeX's memory you used:
- 637 strings out of 495028
- 7102 string characters out of 6181496
+ 639 strings out of 495028
+ 7113 string characters out of 6181496
  62219 words of memory out of 5000000
- 3907 multiletter control sequences out of 15000+600000
+ 3909 multiletter control sequences out of 15000+600000
  6371 words of font info for 23 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,5n,21p,596b,153s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -171,7 +180,7 @@ lic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
 .pfb>
-Output written on seminar_paper.pdf (9 pages, 80256 bytes).
+Output written on seminar_paper.pdf (9 pages, 79863 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
