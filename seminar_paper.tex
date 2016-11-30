@@ -1,5 +1,7 @@
 \documentclass{llncs}
 \usepackage{llncsdoc}
+\usepackage{hyperref}
+
 %
 \begin{document}
 \begin{flushleft}
@@ -41,19 +43,20 @@ This section introduces on of the most related standards for the software vulner
 
 \subsection{SCAP}
  SCAP is collection of open standards and enumerations related to software flaws and security configurations allow the communication of that informations, to support the automated vulnerability and security information management.    
- It provided and maintained by The U.S. National Institute of Standards and Technology (NIST)\cite{nsit}, and the large and public of the SCAP content is the National Vulnerability Database (NVD)\cite{nvd} that provides data feed for each SCAP standard which can be used free by the public security community, which also is managed by NSIT.
+ It provided and maintained by The U.S. National Institute of Standards and Technology (NIST)\cite{nsit}, and the large and public of the SCAP content is the National Vulnerability Database (NVD)\cite{nvd} that provides data feed for each SCAP standard which can be used free by the public security community, which also is managed by NSIT, SCAP has gained adaption by most of the information security systems.  
  The SCAP standards consist of different open standards and enumerations, and the following subset of them:
- 
  
  \begin{itemize}
  \item Common Vulnerabilities and Exposures (CVE®)
- \item  Common Configuration Enumeration (CCE™)
  \item Common Platform Enumeration (CPE™)
+ \item  Common Configuration Enumeration (CCE™)
  \item Common Vulnerability Scoring System (CVSS)
  \end{itemize}
    
+The CVE is the naming list of software flaws in security context, to allow identification of cyber-security vulnerabilities to ease the exchange of information about the cyber-security issues, The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}. The CPE is the dictionary of all software product and applications,operating systems and hardware devices which provides identification and naming for each, the official CPE dictionary can be obtained from NVD repository \footnote{\url{https://nvd.nist.gov/cpe.cfm}} and provided in XML format. The CVSS is scoring system for the software flaw vulnerabilities, and The CCE is  a dictionary of systems configuration and settings issues \cite{scap_doc}
 
-
+The CVE list is not a vulnerabilities data repository \footnote{The list of vulnerabilities databases list can be found at  \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}} is just names/IDs list, 
+and NVD is one of vulnerabilities databases based on the CVE list and it provides a data feed for SCAP content such as  the XML vulnerability feed which contains the cyber security software issues and it provides CVE link and  a CVSS base score and CPE mapping for each vulnerability record \cite{nvd}.    
 \newpage
 
 \section{Alternatives to NVD Repository}
@@ -81,6 +84,12 @@ https://www.nist.gov/
 \bibitem[3]{nvd}
 https://nvd.nist.gov/
 
+
+\bibitem[4]{scap_doc}
+The Technical Specification for the
+Security Content Automation Protocol(SCAP)
+NIST Special Publication 800-126
+Revision 3
 
 %
 \end{thebibliography}
