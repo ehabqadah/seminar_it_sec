@@ -18,12 +18,12 @@
 
 
 \begin{abstract}
-Nowadays, one of the main concerning area for most of organizations is information and software assets security, in this paper we discuss a techniques and systems to automatically monitor the software venerability using open standards and public vulnerability data repositories or alternative sources such the social media and developer blogs. 
+Nowadays, one of the main concerning areas for most of the organizations is information and software asset security, in this paper, we discuss techniques and systems to automatically monitor the software vulnerability using open standards and public vulnerability data repositories or alternative sources such the social media and developer blogs. 
 \end{abstract}
 
 \section{Introduction}
 
-\par Nowadays, one of the main concerning area for most of organizations is information and software assets security which can  be achieved by
+\par Nowadays, one of the main concerning areas for most of organizations is information and software assets security which can  be achieved by
 bt utilizing the software and network security techniques like firewall, but this is not sufficient to ensure the safety of the information assets due the continuous discovery of software vulnerabilities and put the organization's IT assets in risk of cyber attacks  by adversary. Most of organization should be ware and updated about the open software vulnerabilities and perform the need actions like installing the corresponding patch if available, an such information about open vulnerabilities can be retrieved from repositories like National Vulnerability Database NVD.
  
 \par The manual processing of vulnerabilities data requires a quite amount of human resource and could be not affordable for all organizations that motivates for building an  automated software vulnerabilities management systems  which in general try to alert in organizations about the open vulnerabilities related to the organization's IT assets utilizing the data of on-line repositories such NVD, also another sources of data can be also used like the software vulnerability information provided on social media or blogs.
@@ -156,9 +156,16 @@ The proposed system offers the functionality of monotoning certain software prod
 
 \section{Discussion}
 
+\par The proposed technique and system in section 2 mainly focuses on the automation of software vulnerabilities monitoring process and using the open standards and public vulnerability repositories, and the action of system in case of vulnerability  discovery can be argued as simple and does not follow the main system focus to avoid the manual operation, it just sending an alert for the system administrator which then perform the need action, so the system should execute fast and immediate actions such block the corresponding terminal or even the software component to ensure a certain level of security. 
 
+\par The main factor on the accuracy of the system's outcomes is the accuracy of the determination of CPE-IDs for all computing assets in the organization, the proposed systems find the CPE-IDs based on the numerical method of calculating the match rate, and this approach does not always give an accurate matching, and produced CPE-IDs should be validated by the system before moving to the further steps.
+
+
+\par The proposed technique and system in section 4 is trying to detect the vulnerable Softwares as fast as possible by utilizing a different vulnerability information source social media (Twitter) by analyzing and exaggerate the security related content to be used by the detection of vulnerabilities task, which offers the opportunity to detect vulnerable softwares before event publishing the vulnerability information in the classical channels such as NVD, but this approach may utilize non validated or wrong information in the detection process that's why the proposed system consists of trust module for the extracted information from the social media data, since it the quality of data is very important to the system's output. 
+      
 \section{Conclusion}
 
+\par The importance of automatic detection and monitoring of vulnerable Softwares inside the organizations to ensure an efficient level of security and avoid cyber-attacks introduce the need software vulnerability management and monitoring systems as the two proposed system we discussed in this paper,  those systems does not replace the normal security systems and policies it just complete their work. The role of vulnerability information repositories like NVD and the open standards such SCAP protocol is the main actor in building the software vulnerability management and monitoring systems.   
 
 
 \newpage
