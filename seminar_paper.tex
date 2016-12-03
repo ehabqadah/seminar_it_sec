@@ -23,40 +23,37 @@ Nowadays, one of the main concerning areas for most of the organizations is info
 
 \section{Introduction}
 
-\par Nowadays, one of the main concerning areas for most of organizations is information and software assets security which can  be achieved by
-bt utilizing the software and network security techniques like firewall, but this is not sufficient to ensure the safety of the information assets due the continuous discovery of software vulnerabilities and put the organization's IT assets in risk of cyber attacks  by adversary. Most of organization should be ware and updated about the open software vulnerabilities and perform the need actions like installing the corresponding patch if available, an such information about open vulnerabilities can be retrieved from repositories like National Vulnerability Database NVD.
+\par Nowadays, one of the main concerning areas for most of the organizations is information and software asset security which can be achieved by both utilizing the software and network security techniques like a firewall, but this is not sufficient to ensure the safety of the information assets due the continuous discovery of software vulnerabilities and put the organization's IT assets at risk of cyber attacks by an adversary. Most of the organization should beware and updated about the open software vulnerabilities and perform the need actions like installing the corresponding patch if available, any such information about open vulnerabilities can be retrieved from repositories like the National Vulnerability Database NVD.
  
 \par The software Vulnerability Management concept can be defined as the process of identifying the related vulnerabilities for the software components inside the organization, the process requires firstly managing the inventory of organization's IT assets and periodic search for the related vulnerabilities, and in case of vulnerability discovery a certain action should be performed such alerting the administrators or trying to install the corresponding patch es to avoid possible threats based on those known vulnerabilities.
          
 \subsection{Software Vulnerability Management}
 
 \par Vulnerability is " flaw or weakness in system must include an analysis of the security procedures, design, implementation, or vulnerabilities associated with the system internal controls that could be exercised environment. The goal of this step is to (accidentally triggered or intentionally exploited) develop a list of system vulnerabilities and result in a security breach or a violation of the (flaws or weaknesses) that could be system’s security policy" \cite{vuln}.  
-\par The software Vulnerability Management concept can be defined as the process of identifying the related vulnerabilities for the software components inside the organization, the process requires firstly managing the inventory of organization's IT assets and periodic search for the related vulnerabilities, and in case of vulnerability discovery a certain action should be performed such alerting the administrators or trying to install the corresponding patch es to avoid possible threats based on those known vulnerabilities.     
+\par The software Vulnerability Management concept can be defined as the process of identifying the related vulnerabilities for the software components inside the organization, the process requires firstly managing the inventory of organization's IT assets and periodic search for the related vulnerabilities, and in case of vulnerability discovery a certain action should be performed such alerting the administrators or trying to install the corresponding patches to avoid possible threats based on those known vulnerabilities.    
 \newpage
 \section{Automated Vulnerability Management and Monitoring System}
 
-\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitoring the vulnerability of computing assets
-inside the organization/enterprise IT infrastructure network. their main contribution is automating the process of cyber security vulnerabilities management, using open standards and tools to make available to wide range of organizations.
+\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor the vulnerability of computing assets inside the organization/enterprise IT network infrastructure. their main contribution is automating the process of cyber security, vulnerability management, using open standards and tools to make available in a wide range of organizations.
 \par
- The proposed system first collects and compiles the list of IT assets, and the stored data about the organization's computing components is used to find its identifiers, then the system  utilizes those identifiers to check the existence of related vulnerabilities by searching the vulnerabilities repositories, and an alert about the identified security defects will be send to system administrator by the proposed system.
+ The proposed system first collects and compiles the list of IT assets, and the stored data about the organization's computing components is used to find its identifiers, then the system utilizes those identifiers to check the existence of related vulnerabilities by searching the vulnerabilities repositories, and an alert about the identified security defects will be sent to the system's administrator by the proposed system.
     
 \subsection{System Components}
 
 \par This section describes the elements of the proposed system and defines the role of each one. 
 
-The following are the 4 elements type for the automated vulnerability monotoning system:
+The following are the 4 element type in the automated vulnerability monotoning system:
 
 \renewcommand{\labelenumi}{\Roman{enumi}}
  \begin{enumerate}
- \item \textbf{Terminals}: which include all electronic devices used to perform the different business activities by employees of the organization, in most cases
- an agent software installed on terminals to communicate with system coordinator server to provide the information about host terminal.
+ \item \textbf{Terminals}: which include all electronic devices used to perform the different business activities by employees of the organization, in most cases an agent software installed on terminals to communicate with the system coordinator server to provide the information about host terminal.
  
- \item \textbf{System main coordinator server}: this management server is responsible to communicate the installed agents on terminals to collect information about computing assets of the organization, even server collects information about the assets without installed agents by monitoring and analyzing the enterprise's network traffic, to find the identifiers for all asset's parts, and  the server perform the check for the vulnerability presence by the communication with vulnerability database. 
+ \item \textbf{System main coordinator server}: this management server is responsible to communicate the installed agents on terminals to collect information about computing assets of the organization, even server collects information about the assets without installed agents by monitoring and analyzing the enterprise's network traffic, to find the identifiers for all asset's parts, and the server performs the check for the vulnerability presence by the communication with vulnerability databases.
  
- \item \textbf{Vulnerability Knowledge base}: is the local system's database for the vulnerability information, to composed data from different vulnerability repositories like NVD.
+ \item \textbf{Vulnerability Knowledge base}: is the local system's database for the vulnerability information, to compose data from different vulnerability repositories like NVD.
  
  
-  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found cyber security vulnerabilities by the coordinator server in proposed system.   
+  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found cyber security vulnerabilities by the coordinator server in the proposed system.     
  \end{enumerate}
  
 \subsection{System Work flow}
@@ -65,7 +62,7 @@ The following are the 4 elements type for the automated vulnerability monotoning
 The following are the stages of the proposed system work flow:
  
 \begin{enumerate}
- \item \textbf{Compile the computing assets information}: the system starts with the process of collecting the information about all organization's It assets by sending request for the install software agents on terminals or by monitoring the network, and the stored information softwares specifications and operating systems and network addresses and mapped to the proposed schema as shown in Fig 1.  \footnote{based on figure 4 in \cite{paper1}} 
+ \item \textbf{Compile the computing assets information}: the system starts with the process of collecting the information about all organization's It assets by sending a request for the install software agents on terminals or by monitoring the network, and the stored information softwares specifications and operating systems and network addresses and mapped to the proposed schema as shown in Fig 1.  \footnote{based on figure 4 in \cite{paper1}} 
  
  \begin{figure}
  \centering
