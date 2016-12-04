@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.0.1}
 \contentsline {subsection}{\numberline {1.1}Software Vulnerability Management}{3}{subsection.0.1.1}
-\contentsline {section}{\numberline {2}Automated Vulnerability Management and Monitoring System}{5}{section.0.2}
-\contentsline {subsection}{\numberline {2.1}System Components}{5}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {2.2}System Work flow}{6}{subsection.0.2.2}
+\contentsline {section}{\numberline {2}Automated Vulnerability Management and Monitoring System}{4}{section.0.2}
+\contentsline {subsection}{\numberline {2.1}System Components}{4}{subsection.0.2.1}
+\contentsline {subsection}{\numberline {2.2}System Work flow}{4}{subsection.0.2.2}
 \contentsline {section}{\numberline {3}Standards}{6}{section.0.3}
 \contentsline {subsection}{\numberline {3.1}SCAP}{6}{subsection.0.3.1}
-\contentsline {section}{\numberline {4}Alternatives to NVD Repository}{8}{section.0.4}
-\contentsline {section}{\numberline {5}Discussion}{9}{section.0.5}
-\contentsline {section}{\numberline {6}Conclusion}{10}{section.0.6}
+\contentsline {section}{\numberline {4}Alternatives to NVD Repository}{7}{section.0.4}
+\contentsline {section}{\numberline {5}Discussion}{8}{section.0.5}
+\contentsline {section}{\numberline {6}Conclusion}{8}{section.0.6}
