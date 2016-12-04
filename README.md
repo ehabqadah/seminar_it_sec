@@ -1,1 +1,1 @@
-# seminar_it_sec
+![Screenshot](header.png)
