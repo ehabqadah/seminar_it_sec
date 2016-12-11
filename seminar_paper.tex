@@ -64,35 +64,34 @@ One of the main concerning areas for most organizations is software vulnerabilit
    
 \section{Automated Vulnerability Management and Monitoring System}
 
-\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor the vulnerability of computing assets inside the organization/enterprise IT network infrastructure. their main contribution is automating the process of cyber security, vulnerability management, using open standards and tools to make available in a wide range of organizations.
+\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and tools, and to make available in a wide range of organizations.
 \par
- The proposed system first collects and compiles the list of IT assets, and the stored data about the organization's computing components is used to find its identifiers, then the system utilizes those identifiers to check the existence of related vulnerabilities by searching the vulnerabilities repositories, and an alert about the identified security defects will be sent to the system's administrator by the proposed system.
+ The proposed system first collects a list of IT assets, the system uses the collected and stored information about the organization's IT assets to find the corresponding standards identifiers (CPE-IDs) \footnote{ Common Platform Enumeration (CPE™) IDs exaplained in section 3}, then the system utilizes those identifiers to check the existence of related vulnerabilities by querying the vulnerability repositories. Finally an alert about the identified security defects will be sent to the system administrator by the proposed system.
     
 \subsection{System Components}
 
-\par This section describes the elements of the proposed system and defines the role of each one. 
+\par The system proposed in \cite{paper1} is composed by 4 elements, which are described in the following:
 
-The following are the 4 element type in the automated vulnerability monotoning system:
 
-\renewcommand{\labelenumi}{\Roman{enumi}}
  \begin{enumerate}
- \item \textbf{Terminals}: which include all electronic devices used to perform the different business activities by employees of the organization, in most cases an agent software installed on terminals to communicate with the system coordinator server to provide the information about host terminal.
+ \item \textbf{Terminals}: This element includes all electronic devices used by the organization's employees to perform their job activities. In most cases, an agent is installed on a terminal to collect information about the installed IT assets on it. The collected information is then sent to the asset management server.
  
- \item \textbf{System main coordinator server}: this management server is responsible to communicate the installed agents on terminals to collect information about computing assets of the organization, even server collects information about the assets without installed agents by monitoring and analyzing the enterprise's network traffic, to find the identifiers for all asset's parts, and the server performs the check for the vulnerability presence by the communication with vulnerability databases.
+ \item \textbf{Asset Management Server}: this component is responsible to communicate with the installed agents on the terminals to collect information about the computing assets of the organization, and to collect information about the terminals without installed agent the asset management server monitors and analysis the organization's network traffic. The asset management server determines the IT assets standards identifiers using the collected information. Afterward this element checks for the vulnerabilities by querying the vulnerability knowledge base.
  
- \item \textbf{Vulnerability Knowledge base}: is the local system's database for the vulnerability information, to compose data from different vulnerability repositories like NVD.
+ \item \textbf{Vulnerability Knowledge base}: is the local system's database for the vulnerability information to compose data from different vulnerability repositories like NVD.
  
  
-  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found cyber security vulnerabilities by the coordinator server in the proposed system.     
+  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found  security vulnerabilities from the asset management server.     
  \end{enumerate}
  
-\subsection{System Work flow}
+\subsection{System Workflow}
 
-\par This section provides the proposed system's main work flow processes description and output for each stage. 
-The following are the stages of the proposed system work-flow:
+\par In this section the workflow of the proposed system is described.
  
 \begin{enumerate}
- \item \textbf{Compile the computing assets information}: the system starts with the process of collecting the information about all organization's It assets by sending a request for the install software agents on terminals or by monitoring the network, and the stored information softwares specifications and operating systems and network addresses and mapped to the proposed schema as shown in Fig 1.  \footnote{based on figure 4 in \cite{paper1}} 
+ \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information on the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 1.  \footnote{based on figure 4 in \cite{paper1}} 
+ 
+ \footnote{The information in Figure 1 also include cpe and cve which generated by the system in later stages}
  
  \begin{figure}
  \centering
@@ -127,7 +126,7 @@ The following are the stages of the proposed system work-flow:
                <ipAddress>131.220.198.146</ipAddress>
                <macAddress>255.255.240.0</macAddress>
                <subnetMask>255.255.252.0</subnetMask>
-              <nicName> Network controller: Intel Corporation Wireless 3165 (rev 81)</nicName>
+              <nicName>Intel(R) 82578DM Gigabit Network Connection</nicName>
            </nicInfoList>
            <!-- SNIP -->
        </networkInfo>
@@ -136,9 +135,11 @@ The following are the stages of the proposed system work-flow:
    \caption{An example of the collected information by the proposed system for  a terminal.}
     \end{figure}
    
-   \item \textbf{Resolving of computing assets}: the system determines the CPE-IDs for the IT assets using the collected information from the first stage, the CPE dictionary \footnote{\url{https://nvd.nist.gov/cpe.cfm}} obtained from NVD repository is used as reference CPE-IDs for the proposed system. The basic algorithm to extract the corresponding CPE-IDs for the IT-assets builds a query from the collect information like name,version and owner and calculate the matching rate (percentage of the similar characters) for each cpe-id record in the CPE dictionary and select the CP-IDs with the highest matching rate and these CPE-IDs added to assets stored information as seen in Figure 1.
    
-   \item \textbf{Finding Vulnerability Information}: The system uses the determined CPE-IDs to query the vulnerability knowledge base for related vulnerabilities and in case of discovering of new vulnerability system's administrator notified by alert containing the cpe and cve data.      
+   
+   \item \textbf{Resolving of IT assets identifiers}: the system determines the CPE-IDs for the IT assets using the collected information from the first stage, the CPE dictionary \footnote{\url{https://nvd.nist.gov/cpe.cfm}} obtained from NVD repository is used as reference CPE-IDs for the proposed system. The basic algorithm to extract the corresponding CPE-IDs for the IT-assets builds a query from the collect information like name, version and owner and calculate the matching rate (percentage of the similar characters) for each CPE-ID record in the CPE dictionary and select the CP-IDs with the highest matching rate and these CPE-IDs added to assets stored information as seen in Figure 1.
+   
+   \item \textbf{Finding Vulnerability Information}: The system uses the determined CPE-IDs to query the vulnerability knowledge base for related vulnerabilities and in case of discovering a vulnerability  the system administrator is notified by alert containing the CPE and CVE data.      
    
  
  \end{enumerate}
@@ -146,24 +147,26 @@ The following are the stages of the proposed system work-flow:
 
 
 \section{Standards}
-This section introduces on of the most related standards for the software vulnerability management, which is the Security Content Automation Protocol(SCAP) \footnote{\url{https://scap.nist.gov/}}.
+This section introduces the most related standards for the software vulnerability management, which is the Security Content Automation Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}.
 
 
 \subsection{SCAP}
 
 \par SCAP is a collection of open standards and enumerations of software flaws and configurations related to security allow the communication of that information, to support the automated vulnerability and security information management. \par   
- It provided and maintained by The U.S. National Institute of Standards and Technology (NIST)\cite{nsit}, and the large and public of the SCAP content is the National Vulnerability Database (NVD)\cite{nvd} that provides a data feed for each SCAP standard which can be used freely by the public security community, which also is managed by NSIT, SCAP has gained adoption by most of the information security systems.  
- The SCAP standards consist of different open standards and enumerations, and the following subset of them:
+ It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}, and the repository of the SCAP content is the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}} that provides a data feed for each SCAP standard which can be publicly accessed by the security community. And it is also managed by NSIT, SCAP has gained adoption by most of the information security systems. 
+  
+ The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems.
  
  \begin{itemize}
  \item Common Vulnerabilities and Exposures (CVE®)
  \item Common Platform Enumeration (CPE™)
- \item  Common Configuration Enumeration (CCE™)
  \item Common Vulnerability Scoring System (CVSS)
  \end{itemize}
  
  \par  
 The CVE is the naming list of software flaws in security context, to allow identification of cyber-security vulnerabilities to ease the exchange of information about the cyber-security issues, The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}. The CPE is the dictionary of all software products and applications,operating systems and hardware devices which provides identification and naming for each, the official CPE dictionary can be obtained from NVD repository \footnote{\url{https://nvd.nist.gov/cpe.cfm}} and provided in XML format. The CVSS is scoring system for the software flaw vulnerabilities, and The CCE is  a dictionary of systems configuration and settings issues \cite{scap_doc}.
+
+\newpage
 \par
 The CVE list is not vulnerabilities data repository \footnote{The list of vulnerabilities databases list can be found at  \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}} is just names/IDs list, 
 and NVD is one of vulnerabilities databases based on the CVE list and it provides a data feed for SCAP content such as  the XML vulnerability feed which contains the cyber security software issues and it provides CVE link and  a CVSS base score and CPE mapping for each vulnerability record \cite{nvd}.    
@@ -208,24 +211,16 @@ for Information Technology Systems”, NIST Special Publication 800-
 30, July 2002
 http://csrc.nist.gov/publications/nistpubs/800-30/sp800-30.pdf
 
-\bibitem[2]{nsit}
-https://www.nist.gov/ .
-
-\bibitem[3]{nvd}
-https://nvd.nist.gov/ .
-
-
-\bibitem[4]{scap_doc}
-
+\bibitem[2]{scap_doc}
 The Technical Specification for the
 Security Content Automation Protocol(SCAP)
 NIST Special Publication 800-126
 Revision 3.
 
-\bibitem[5]{paper1}
-
+\bibitem[3]{paper1}
 Takahashi, Takeshi, Daisuke Miyamoto, and Koji Nakao. "Toward automated vulnerability monitoring using open information and standardized tools." 2016 IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom Workshops). IEEE, 2016.
-\bibitem[6]{paper2}
+
+\bibitem[4]{paper2}
 Trabelsi, Slim, et al. "Mining social networks for software vulnerabilities monitoring." 2015 7th International Conference on New Technologies, Mobility and Security (NTMS). IEEE, 2015.
 %
 \end{thebibliography}
