@@ -154,23 +154,22 @@ This section introduces the most related standards for the software vulnerabilit
 
 \par SCAP is a collection of open standards and enumerations of software flaws and configurations related to security allow the communication of that information, to support the automated vulnerability and security information management. \par   
  It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}, and the repository of the SCAP content is the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}} that provides a data feed for each SCAP standard which can be publicly accessed by the security community. And it is also managed by NSIT, SCAP has gained adoption by most of the information security systems. 
+ 
+ The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems\cite{scap_doc}.
+ 
+ \begin{enumerate}
+ \item \textbf{Common Vulnerabilities and Exposures (CVE®)}: CVE\footnote{\url{https://cve.mitre.org/index.html}} is a list of known software venerabilities With standard identifiers. The CVE standard identifiers ease the exchange of information about the security issues between the different vulnerability repositories and security tools. The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}.
+ \par
+ The CVE list is not a vulnerability repository\footnote{The list of vulnerability databases list can be found at \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}}, it is just a list of identifiers for the known vulnerabilities with basic information such as standard identifier and description. It designed to allow the connection between different vulnerability repositories. The NVD is a vulnerability database uses the CVE IDs. It provides the XML vulnerability feed that built based upon the CVE IDs, CVE list entries enriched with more information by NVD such as corresponding CVSS base score and CPE mapping.    
+ 
+ \item \textbf{Common Platform Enumeration (CPE™)}:
+ 
+   CPE is identifiers dictionary for all software products and applications,operating systems and hardware devices. The official dictionary provided in XML format by NVD \footnote{CPE Product Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}}.
   
- The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems.
+ \item \textbf{Common Vulnerability Scoring System (CVSS)}:
+   CVSS is scoring system for the software flaw vulnerabilities.
+ \end{enumerate}
  
- \begin{itemize}
- \item Common Vulnerabilities and Exposures (CVE®)
- \item Common Platform Enumeration (CPE™)
- \item Common Vulnerability Scoring System (CVSS)
- \end{itemize}
- 
- \par  
-The CVE is the naming list of software flaws in security context, to allow identification of cyber-security vulnerabilities to ease the exchange of information about the cyber-security issues, The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}. The CPE is the dictionary of all software products and applications,operating systems and hardware devices which provides identification and naming for each, the official CPE dictionary can be obtained from NVD repository \footnote{\url{https://nvd.nist.gov/cpe.cfm}} and provided in XML format. The CVSS is scoring system for the software flaw vulnerabilities, and The CCE is  a dictionary of systems configuration and settings issues \cite{scap_doc}.
-
-\newpage
-\par
-The CVE list is not vulnerabilities data repository \footnote{The list of vulnerabilities databases list can be found at  \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}} is just names/IDs list, 
-and NVD is one of vulnerabilities databases based on the CVE list and it provides a data feed for SCAP content such as  the XML vulnerability feed which contains the cyber security software issues and it provides CVE link and  a CVSS base score and CPE mapping for each vulnerability record \cite{nvd}.    
-
 
 \section{Alternatives to NVD Repository}
 
@@ -185,6 +184,7 @@ The data processing subsystem is performing the extraction of security informati
 The proposed system offers the functionality of monitoring certain software products, the system shows the discovered security information related to user's selected softwares.
   
 
+\newpage
 \section{Discussion}
 
 \par The proposed technique and system in section 2 mainly focuses on the automation of software vulnerabilities monitoring process and using the open standards and public vulnerability repositories, and the action of the system in case of vulnerability  discovery can be argued as simple and does not follow the main system focus to avoid the manual operation, it just sends an alert for the system administrator which then perform the need action, so the system should execute fast and immediate actions, such block the corresponding terminal or even the software component to ensure a certain level of security. 
