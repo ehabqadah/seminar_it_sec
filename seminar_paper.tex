@@ -147,27 +147,27 @@ One of the main concerning areas for most organizations is software vulnerabilit
 
 
 \section{Standards}
-This section introduces the most related standards for the software vulnerability management, which is the Security Content Automation Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}.
+This section introduces the most related standard for the software vulnerability management, which is the Security Content Automation Protocol (SCAP).\footnote{\url{https://scap.nist.gov/}}
 
 
 \subsection{SCAP}
 
-\par SCAP is a collection of open standards and enumerations of software flaws and configurations related to security allow the communication of that information, to support the automated vulnerability and security information management. \par   
- It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}, and the repository of the SCAP content is the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}} that provides a data feed for each SCAP standard which can be publicly accessed by the security community. And it is also managed by NSIT, SCAP has gained adoption by most of the information security systems. 
+\par SCAP is a collection of open standards and enumerations for the security related software flaws and configuration issues, to allow the communication of that information to support the automated vulnerability management\cite{scap_doc}. \par   
+ It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}, and the repository of the SCAP standards is the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}, that provides a data feeds for the SCAP elements which can be publicly accessed by the security community. Also NVD is managed by NSIT.
  
  The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems\cite{scap_doc}.
  
  \begin{enumerate}
  \item \textbf{Common Vulnerabilities and Exposures (CVE®)}: CVE\footnote{\url{https://cve.mitre.org/index.html}} is a list of known software venerabilities With standard identifiers. The CVE standard identifiers ease the exchange of information about the security issues between the different vulnerability repositories and security tools. The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}.
  \par
- The CVE list is not a vulnerability repository\footnote{The list of vulnerability databases list can be found at \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}}, it is just a list of identifiers for the known vulnerabilities with basic information such as standard identifier and description. It designed to allow the connection between different vulnerability repositories. The NVD is a vulnerability database uses the CVE IDs. It provides the XML vulnerability feed that built based upon the CVE IDs, CVE list entries enriched with more information by NVD such as corresponding CVSS base score and CPE mapping.    
+ The CVE list is not a vulnerability repository\footnote{The list of vulnerability databases list can be found at \url{https://cve.mitre.org/compatible/product_type.html Database\#Vulnerability}}, it is just a list of identifiers for the known vulnerabilities with basic information such as standard identifier and description. It designed to allow the linking between different vulnerability repositories. The NVD is a vulnerability database uses the CVE IDs. It provides the XML vulnerability feed that built based upon the CVE IDs, CVE list entries enriched with additional information by NVD such as corresponding CVSS base score and CPE mapping.    
  
  \item \textbf{Common Platform Enumeration (CPE™)}:
  
-   CPE is identifiers dictionary for all software products and applications,operating systems and hardware devices. The official dictionary provided in XML format by NVD \footnote{CPE Product Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}}.
+   CPE is identifiers dictionary for all software products and applications,operating systems and hardware devices. The official dictionary provided in XML format by NVD.\footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}}
   
- \item \textbf{Common Vulnerability Scoring System (CVSS)}:
-   CVSS is scoring system for the software flaw vulnerabilities.
+ \item \textbf{Common Vulnerability Scoring System (CVSS)} \footnote{\url{https://www.first.org/cvss}} :
+   CVSS is scoring system for the software flaw vulnerabilities, by providing a relative severity for the vulnerabilities.
  \end{enumerate}
  
 
