@@ -7,7 +7,7 @@
 \begin{flushleft}
  
  \thispagestyle{empty}
-\centering\LARGE {\bf Automated Software Vulnerability Management and Monitoring }
+\centering\LARGE {\bf Automated Software Vulnerability Management}
 
 
 \rule{\textwidth}{1pt}
@@ -45,12 +45,12 @@
 
 
 \begin{abstract}
-One of the main concerning areas for most organizations is software vulnerability analysis. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability data repositories or alternative sources such social media and developer blogs. 
+One of the main concerning areas for most organizations is software vulnerability analysis. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability data repositories or alternative sources such as social media and developer blogs. 
 \end{abstract}
 
 \section{Introduction}
 
-\par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security, and this area is important due the continuous discovery of software vulnerabilities that open the doors for cyber-attacks. All organization must be aware of the known software vulnerabilities to perform the needed actions including installing the corresponding patches if available. Information about known software vulnerabilities can be retrieved from online repositories like the National Vulnerability Database (NVD).
+\par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security,  this area is important due the continuous discovery of software vulnerabilities that open the doors for cyber-attacks. All organization must be aware of the known software vulnerabilities to perform the needed actions including installing the corresponding patches if available. Information about known software vulnerabilities can be retrieved from public repositories like the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}.
  
          
 \subsection{Software Vulnerability Management}
@@ -62,7 +62,7 @@ One of the main concerning areas for most organizations is software vulnerabilit
 
 
    
-\section{Automated Vulnerability Management and Monitoring System}
+\section{Automated Software Vulnerability Management System}
 
 \par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and tools, and to make available in a wide range of organizations.
 \par
@@ -153,7 +153,7 @@ This section introduces the most related standard for the software vulnerability
 \subsection{SCAP}
 
 \par SCAP is a collection of open standards and enumerations for the security related software flaws and configuration issues, the exchange of these standards offers the ability to automate vulnerability management\cite{scap_doc}. \par   
- It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}. The repository of the SCAP content is the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}, that provides a data feeds for each SCAP standard which can be publicly accessed by the security community. Also NVD is managed by NSIT.
+ It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}. The repository of the SCAP content is the National Vulnerability Database (NVD), that provides a data feeds for each SCAP standard which can be publicly accessed by the security community. Also NVD is managed by NSIT.
  
  The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems\cite{scap_doc}.
  
@@ -185,16 +185,14 @@ The proposed system offers the functionality of monitoring certain software comp
 \newpage
 \section{Discussion}
 
-\par The proposed technique and system in Section 2 mainly focuses on the automation of software vulnerabilities monitoring process and using the open standards and public vulnerability repositories, and the action of the system in case of vulnerability  discovery can be argued as simple and does not follow the main system focus to avoid the manual operation, it just sends an alert for the system administrator which then perform the need action, so the system should execute fast and immediate actions, such block the corresponding terminal or even the software component to ensure a certain level of security. 
-
-\par The main factor on the accuracy of the system's outcomes is the accuracy of the determination of CPE-IDs for all computing assets in the organization, the proposed systems find the CPE-IDs based on the numerical method of calculating the match rate, and this approach does not always give an accurate matching, and produced CPE-IDs should be validated by the system before moving to the further steps.
+\par The proposed technique and system in Section 2 mainly focuses on the automation of software vulnerabilities monitoring using the open standards and public vulnerability repositories. The performed action by the proposed system in case of vulnerability discovery can be argued as simple, it does not follow the system requirement of avoiding the manual operation. The system just sends an alert for the system's administrator who is responsible  to perform the need action based on the provided vulnerability information. To achieve the goal of full automation level, the system should execute fast and immediate actions such as  blocking the corresponding terminal or even the software component to ensure security inside the organization. Furthermore, the accuracy of the system's outcome mainly depends on the accuracy of the determination of CPE-IDs for all IT assets inside the organization, the proposed systems find the CPE-IDs based on a numerical method of calculating the match rate, this approach does not always give an accurate matching\footnote{ The authors indicate that the match rate approach does not always give accurate results.}. Also phe determined CPE-IDs should be validated by the system before moving to the further steps to avoid useless processing and invalid alerts.
 
 
-\par The proposed technique and system in section 4 is trying to detect the vulnerable Softwares as fast as possible by utilizing a different vulnerability information source social media (Twitter) by analyzing and exaggerate the security related content to be used by the detection of vulnerabilities task, which offers the opportunity to detect vulnerable softwares before event publishing the vulnerability information in the classical channels such as NVD, but this approach may utilize non validated or wrong information in the detection process that's why the proposed system consists of trust module of the extracted information from the social media data, since it the quality of data is very important to the system's output. 
+\par The proposed technique and system in Section 4 is trying to detect the vulnerable Softwares as fast as possible by utilizing a new different vulnerability information source which is the social media like Twitter. The system analyzes the social media content to extract the security vulnerability information. This approach offers the opportunity to detect vulnerable softwares before publishing the vulnerability information in the classical channels such as NVD, but this approach may utilize non validated or wrong information identify security software vulnerabilities, which forces the proposed system to  have trust module of the extracted information from the social media data, that means the accuracy of the system's output fundamentally affect by the strength of the users trust model.
       
 \section{Conclusion}
 
-\par The importance of automatic detection and monitoring of vulnerable Softwares inside the organizations to ensure an efficient level of security and avoid cyber-attacks introduce the need software vulnerability management and monitoring systems as the two proposed system we discussed in this paper,  those systems does not replace the normal security systems and policies they just complete their work. The role of vulnerability information repositories like NVD and the open standards such SCAP protocol is the main actor in building the software vulnerability management and monitoring systems.   
+\par The importance of automatic detection and monitoring of vulnerable softwares inside the organizations to avoid cyber-attacks introduces the need software vulnerability management systems. The discussed two software vulnerability management systems do not replace the normal security solutions and producers but they just complete their work and ensure an efficient level of security. The role of vulnerability information repositories like NVD and the open standards of SCAP protocol is the main actor in building the software vulnerability management systems.   
 
 
 \newpage
