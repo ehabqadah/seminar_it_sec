@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  15 DEC 2016 21:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  15 DEC 2016 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,15 +360,15 @@ Missing character: There is no œ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no  in font cmr9!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
  (./seminar_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 212.
 Package rerunfilecheck Info: File `seminar_paper.out' has not changed.
 (rerunfilecheck)             Checksum: 38F8D714056714F397D120C168CFDC1F;629.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
  6016 strings out of 495028
@@ -390,7 +390,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on seminar_paper.pdf (10 pages, 183333 bytes).
+Output written on seminar_paper.pdf (10 pages, 183492 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  220 compressed objects within 3 object streams

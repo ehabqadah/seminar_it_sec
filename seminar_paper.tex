@@ -158,16 +158,17 @@ This section introduces the most related standard for the software vulnerability
 
 \section{Alternatives to the NVD Repository}
 
-\par This section describe alternative vulnerability data source to the traditional vulnerability repositories such as NVD for the software vulnerability monitoring task. Due the regular delay of revelation of security related defects by the typical vulnerability information sources detection of zero day venerabilities is difficult. In order to solve this issue a technique to collect the security information from completely new data source which is the Social Media like Twitter to monitor software vulnerabilities was proposed in \cite{paper2}.
+\par This section describes alternative vulnerability data source to the traditional vulnerability repositories such as NVD for the software vulnerability monitoring task. Due the regular delay of revelation of security related defects by the typical vulnerability information sources detection of zero day venerabilities is difficult.  In order to solve this issue a technique to collect the security information from completely new data source which is the Social Media like Twitter to monitor software vulnerabilities was proposed in \cite{paper2}.
+
 \par
+The proposed system takes the advantage of getting informed about security vulnerability information earlier than the normal software vulnerabilities repositories, and that because of the widespread usage of social media platforms and technical blogs to discuss the security software bugs and issues between the software developers and experts communities. On the other hand the classical information sources (such as NVD) wait the availability of patches from the software vendor before publishing the vulnerability information.
 
-The proposed system takes the advantage of getting informed about security vulnerability information earlier than the normal software vulnerabilities repositories because of the widespread usage of social media platforms and technical blogs to discuss the security software bugs and issues between the software developers and experts communities. On the other hand the classical information sources (such as NVD) wait the availability of patches before publishing the vulnerability information.
-
-\par The introduced system is called SMASH (Social Media Analysis for security on HANA) consist of two subsystems namely data collection and processing. The data collection subsystem is responsible to gather the security information from the social media (Twitter \footnote{Twitter has been used in authors prototype, but the technique is also applicable for other social media platforms}) by searching the Twitter stream content to related security information and store it in the local database to be utilized by the system later. The system also keeps a copy of the software vulnerabilities form NVD (XML vulnerability feed) to be used in recognizing the new from the already published vulnerabilities.
+\par The introduced system is called SMASH (Social Media Analysis for security on HANA) consist of two subsystems namely data collection and processing. The data collection subsystem is responsible to gather the security information from the social media (Twitter \footnote{Twitter has been used in the proposed system prototype, but the technique is also applicable for other social media platforms}) by searching the Twitter stream content to related security information (by using security associated terms e.g exploit) and store it in the local database to be utilized by the system later. The system also keeps a copy of the software vulnerabilities form NVD (XML vulnerability feed) to be used in recognizing the new from already published vulnerabilities.
 \par
-The data processing subsystem is performing the extraction of security information from the stored Twitter content to detect the zero-day vulnerabilities which are not published yet, by using various data mining techniques.
+The data processing subsystem is performing the extraction of security information by analyzing the stored Twitter content using various data mining techniques. The extracted security information 
+includes zero-day vulnerabilities which are not published yet, and requests to create new CVE or update old entry.
 
-The proposed system offers the functionality of monitoring certain software components selected by the system's users, then the discovered vulnerabilities  by the system are displayed to the users.
+The proposed system offers the functionality of monitoring certain software components selected by the system's users, then the discovered vulnerabilities by the system are displayed to the users.
   
 
 \section{Discussion}
