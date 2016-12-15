@@ -19,7 +19,7 @@
  Seminar Paper  
  \\MA-INF 3317 Selected Topics in IT Security
 
-{\Large Version 1.0 draft }
+{\Large Version 1.1 }
 
 \vspace{8pt}
 \today
@@ -45,19 +45,20 @@
 
 
 \begin{abstract}
-One of the main concerning areas for most organizations is software vulnerability analysis. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability data repositories or alternative sources such as social media and developer blogs. 
+One of the main concerning areas for most organizations is software vulnerability analysis. To avoid cyber-attacks organizations continuously try to identify the vulnerable software. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability information repositories or alternative sources such as social media and developer blogs. 
 \end{abstract}
 
 \section{Introduction}
 
-\par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security,  this area is important due the continuous discovery of software vulnerabilities that open the doors for cyber-attacks. All organization must be aware of the known software vulnerabilities to perform the needed actions including installing the corresponding patches if available. Information about known software vulnerabilities can be retrieved from public repositories like the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}.
+\par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security, this area is important because of the continuous discovery of new software vulnerabilities (on daily basis) that open the doors for cyber-attacks. All organizations must be aware of the public known software vulnerabilities to perform the needed actions to avoid any kind of theft or damage for their computing assets. These actions include installing the corresponding patches if available. Information about reported software vulnerabilities can be retrieved from public repositories like the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. 
+\par Finding the vulnerability information related to the organization's IT assets is usually time and resource consuming task, that motivates to build automated software vulnerability management systems. 
  
-         
+       
 \subsection{Software Vulnerability Management}
 
-\par Vulnerability is defect or weakness in system result security incident or violation such as inappropriate access to system component or data breaches defined by G. Stonebumer et al. in \cite{vuln}.  
+\par Vulnerability is defect or weakness in system leads to security incident or violation such as inappropriate access to the system, that could be exploited by attacker or accidentally triggered defined by G. Stonebumer et al. in \cite{vuln}.  
 
-\par The Software Vulnerability Management concept can be defined as the process of identifying related vulnerabilities in software that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and the periodic search for the related vulnerabilities. In case of the discovery of a vulnerability, a certain action should be performed such as alerting the system administrators or trying to install the corresponding patches to avoid possible threats based on those known vulnerabilities. 
+\par The Software Vulnerability Management concept can be defined as the process of identifying related vulnerabilities in software that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, a certain actions should be performed such as alerting the system administrators or trying to install the corresponding patches to avoid possible threats based on those known vulnerabilities. 
 
 
 
@@ -84,6 +85,7 @@ One of the main concerning areas for most organizations is software vulnerabilit
   \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found  security vulnerabilities from the asset management server.     
  \end{enumerate}
  
+ \newpage
 \subsection{System Workflow}
 
 \par In this section the workflow of the proposed system is described.
