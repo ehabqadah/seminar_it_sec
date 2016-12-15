@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {2}Automated Software Vulnerability Management System}{3}{section.0.2}
 \contentsline {subsection}{\numberline {2.1}System Components}{4}{subsection.0.2.1}
 \contentsline {subsection}{\numberline {2.2}System Workflow}{5}{subsection.0.2.2}
-\contentsline {section}{\numberline {3}Standards}{5}{section.0.3}
-\contentsline {subsection}{\numberline {3.1}SCAP}{5}{subsection.0.3.1}
+\contentsline {section}{\numberline {3}Standards}{6}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}SCAP}{6}{subsection.0.3.1}
 \contentsline {section}{\numberline {4}Alternatives to the NVD Repository}{7}{section.0.4}
 \contentsline {section}{\numberline {5}Discussion}{8}{section.0.5}
-\contentsline {section}{\numberline {6}Conclusion}{9}{section.0.6}
+\contentsline {section}{\numberline {6}Conclusion}{8}{section.0.6}
