@@ -51,7 +51,7 @@ One of the main concerning areas for most organizations is software vulnerabilit
 \section{Introduction}
 
 \par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security, this area is important because of the continuous discovery of new software vulnerabilities (on daily basis) that open the doors for cyber-attacks. All organizations must be aware of the public known software vulnerabilities to perform the needed actions to avoid any kind of theft or damage for their computing assets. These actions include installing the corresponding patches if available. Information about reported software vulnerabilities can be retrieved from public repositories like the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. 
-\par Finding the vulnerability information related to the organization's IT assets is usually time and resource consuming task, that motivates to build automated software vulnerability management systems. 
+\par Finding the vulnerability information related to the organization's IT assets is usually time and resource consuming task, du the fact of required manual retrieving and processing of vulnerability information by human resources. This issue motivates to build automated software vulnerability management systems. 
  
        
 \subsection{Software Vulnerability Management}
@@ -65,9 +65,9 @@ One of the main concerning areas for most organizations is software vulnerabilit
    
 \section{Automated Software Vulnerability Management System}
 
-\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and tools, and to make available in a wide range of organizations.
+\par This section presents the proposed technique and system by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and tools. They used open standards and data to make their system usable by a wide range of organizations.
 \par
- The proposed system first collects a list of IT assets, the system uses the collected and stored information about the organization's IT assets to find the corresponding standards identifiers (CPE-IDs) \footnote{ Common Platform Enumeration (CPE™) IDs exaplained in section 3}, then the system utilizes those identifiers to check the existence of related vulnerabilities by querying the vulnerability repositories. Finally an alert about the identified security defects will be sent to the system administrator by the proposed system.
+ The proposed system first collects information about the list of IT assets inside an organization, the system stores the collected information about the organization's IT assets and uses it to determine the corresponding standards identifiers (CPE-IDs)\footnote{ Common Platform Enumeration (CPE™) IDs explained in section 3} for each IT asset. Then the system utilizes these identifiers to check the existence of related vulnerabilities by querying vulnerability repositories and using computed identifiers as keys. Finally an alert about the identified security defects will be sent to the system administrator by the proposed system.
     
 \subsection{System Components}
 
@@ -77,12 +77,12 @@ One of the main concerning areas for most organizations is software vulnerabilit
  \begin{enumerate}
  \item \textbf{Terminals}: This element includes all electronic devices used by the organization's employees to perform their job activities. In most cases, an agent is installed on a terminal to collect information about the installed IT assets on it. The collected information is then sent to the asset management server.
  
- \item \textbf{Asset Management Server}: this component is responsible to communicate with the installed agents on the terminals to collect information about the computing assets of the organization, and to collect information about the terminals without installed agent the asset management server monitors and analysis the organization's network traffic. The asset management server determines the IT assets standards identifiers using the collected information. Afterward this element checks for the vulnerabilities by querying the vulnerability knowledge base.
+ \item \textbf{Asset Management Server}: this component is responsible to communicate with the installed agents on the terminals to collect information about the IT assets, and  in order to collect information about the terminals without installed agent the organization's network traffic is monitored and analyzed by the asset management server. The collected information is organized and stored using defined system's schema. Also asset management server determines the IT assets standard identifiers using the collected information and append these identifier to the stored IT assets information. In addition this element checks for the presence vulnerability by querying the vulnerability knowledge base.
  
  \item \textbf{Vulnerability Knowledge base}: is the local system's database for the vulnerability information to compose data from different vulnerability repositories like NVD.
  
  
-  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the found  security vulnerabilities from the asset management server.     
+  \item \textbf{Administrator terminal}: is the console used by the system administrator which receives the notification alert about the discovered security vulnerabilities from the asset management server.     
  \end{enumerate}
  
  \newpage
@@ -184,7 +184,6 @@ The data processing subsystem is performing the extraction of security informati
 The proposed system offers the functionality of monitoring certain software components selected by the system's users, then the discovered vulnerabilities  by the system are displayed to the users.
   
 
-\newpage
 \section{Discussion}
 
 \par The proposed technique and system in Section 2 mainly focuses on the automation of software vulnerabilities monitoring using the open standards and public vulnerability repositories. The performed action by the proposed system in case of vulnerability discovery can be argued as simple, it does not follow the system requirement of avoiding the manual operation. The system just sends an alert for the system's administrator who is responsible  to perform the need action based on the provided vulnerability information. To achieve the goal of full automation level, the system should execute fast and immediate actions such as  blocking the corresponding terminal or even the software component to ensure security inside the organization. Furthermore, the accuracy of the system's outcome mainly depends on the accuracy of the determination of CPE-IDs for all IT assets inside the organization, the proposed systems find the CPE-IDs based on a numerical method of calculating the match rate, this approach does not always give an accurate matching\footnote{ The authors indicate that the match rate approach does not always give accurate results.}. Also phe determined CPE-IDs should be validated by the system before moving to the further steps to avoid useless processing and invalid alerts.
