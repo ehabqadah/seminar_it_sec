@@ -52,9 +52,22 @@ One of the main concerning areas for organizations is software vulnerability ana
 
 \section{Introduction}
 
-\par One of the main concerning areas for most organizations is software vulnerability analysis to ensure certain level of security, this area is important because of the continuous discovery of new software vulnerabilities (on daily basis) that open the doors for cyber-attacks. All organizations must be aware of the known software vulnerabilities to perform the needed actions to avoid any kind of theft or damage for their computing assets. These actions include installing the corresponding patches if available or blocking the vulnerable asset from connecting to the organization's network. Information about reported software vulnerabilities can be retrieved from public repositories like the National Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. 
-\par Finding the vulnerability information related to the organization's IT assets is usually time and resource consuming task, due to the fact of the required manual retrieving and processing of vulnerability information. This issue motivates the development of automated software vulnerability management systems. 
- 
+\par Every year, new vulnerabilities are found in software products such as Internet Explorer, Flash 
+ Player, and Java. According to Symantec \cite{symantec}, in 2015, the number of new vulnerabilities 
+ reached 5,585, and 54 zero-day vulnerabilities were discovered. For cybercriminals 
+ unpatched vulnerabilities represent an opportunity to carry out their attacks successfully. 
+ Therefore, in order to prevent, for example, information theft, organizations require of 
+ effective and efficient methods to automatically detect vulnerabilities in software installed in 
+ their networks. After detecting a software vulnerability, immediate actions (e.g. installing 
+ patches or preventing users from employing the vulnerable software) must be taken. 
+ \par To automatically detect software vulnerabilities, organizations need a reliable source of 
+ known vulnerabilities. Some solutions employ public repositories like the National 
+ Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. Nonetheless, organizations do not only precise of information 
+ about software vulnerabilities, but also of a method to gather information on the software 
+ installed in their networks and to match that information with the vulnerabilities. 
+ \par In this paper, we beginning with a briefly explanation of the software vulnerability 
+ management concept. Then, we describe standards used to unique identify software products 
+ and vulnerabilities. Thereafter, we present two approaches to detect software venerabilities. Finally, we discuss these approaches and give the conclusion.
        
 \section{Software Vulnerability Management}
 
@@ -192,23 +205,25 @@ The proposed system offers the functionality of monitoring certain software comp
 
 %
 
-
-\bibitem[1]{vuln}
+\bibitem[1]{symantec} 
+Symantec: Internet Security Threat Report Vol. 21, April 2016,
+\\\texttt{https://www.symantec.com/content/dam/symantec/docs/reports/istr-21-2016-en.pdf}
+\bibitem[2]{vuln}
 G Stoneburner, A Goguen, and A Feringa, “Risk Management Guide
 for Information Technology Systems”, NIST Special Publication 800-
 30, July 2002
 http://csrc.nist.gov/publications/nistpubs/800-30/sp800-30.pdf
 
-\bibitem[2]{scap_doc}
+\bibitem[3]{scap_doc}
 The Technical Specification for the
 Security Content Automation Protocol (SCAP)
 NIST Special Publication 800-126
 Revision 3.
 
-\bibitem[3]{paper1}
+\bibitem[4]{paper1}
 Takahashi, Takeshi, Daisuke Miyamoto, and Koji Nakao. "Toward automated vulnerability monitoring using open information and standardized tools." 2016 IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom Workshops). IEEE, 2016.
 
-\bibitem[4]{paper2}
+\bibitem[5]{paper2}
 Trabelsi, Slim, et al. "Mining social networks for software vulnerabilities monitoring." 2015 7th International Conference on New Technologies, Mobility and Security (NTMS). IEEE, 2015.
 %
 \end{thebibliography}
