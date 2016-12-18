@@ -47,7 +47,7 @@
 
 
 \begin{abstract}
-One of the main concerning areas for organizations is software vulnerability analysis. The automatic identification of vulnerable software inside the organization is fundamental to avoid cyber-attacks. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability information repositories or alternative sources such as social media and developer blogs. 
+One of the main concerning areas for organizations is software vulnerability analysis to ensure reasonable levels of security. The automatic identification of vulnerable software inside the organization is fundamental to avoid cyber-attacks. In this paper, we discuss techniques and systems to automatically monitor software vulnerabilities using open standards and public vulnerability information repositories or alternative sources such as social media and developer blogs. 
 \end{abstract}
 
 \section{Introduction}
@@ -58,28 +58,30 @@ One of the main concerning areas for organizations is software vulnerability ana
        
 \section{Software Vulnerability Management}
 
-\par Vulnerability is a defect or weakness in system that leads to security incident or violation such as inappropriate access, that could be exploited by attackers or accidentally triggered as defined by G. Stonebumer et al. in \cite{vuln}.  
+In this section, we discuss two basic definitions related to the software vulnerability analysis.
+\par Vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information of services by attackers. \cite{vuln}.  
 
-\par The Software Vulnerability Management concept can be defined as the process of identifying related vulnerabilities in a software that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system administrators or trying to install the corresponding patches to avoid possible threats based on those vulnerabilities. 
+\par The Software Vulnerability Management concept can be defined as the process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrators or installing the corresponding patches to avoid possible threats based on those vulnerabilities. 
 
-
+\newpage
 \section{Standards	Used	in	Software	Vulnerability	Management}
-This section introduces the most related standard for the software vulnerability management, which is the Security Content Automation Protocol (SCAP).\footnote{\url{https://scap.nist.gov/}}
-
-\par SCAP is a collection of open standards and enumerations for the security related software flaws and configuration issues, the exchange of these standards offers the ability to automate vulnerability management\cite{scap_doc}. \par   
- It is provided and maintained by the National Institute of Standards and Technology (NIST) \footnote{\url{https://www.nist.gov/}}. The repository of the SCAP content is NVD, that provides a data feed for each SCAP standard which can be publicly accessed by the security community. Also NVD is managed by NSIT.
  
- The SCAP Standard is composed by six components. In the following we describe the components that can be utilized by vulnerability analysis systems.
+ In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}.This protocol is a collection of open standards and enumerations for the	security related software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
+ SCAP is provided	and	maintained	by	the	National	Institute	of	Standards	and	Technology (NIST)\footnote{\url{https://www.nist.gov/}}.	The	repository	of	the	SCAP	content	is	NVD, that provides	a data	feed for each SCAP	standard	
+ which can	be	publicly accessed	by	the	security	community.	Also NVD is	managed	by NIST.
  
- \begin{enumerate}
- \item \textbf{Common Vulnerabilities and Exposures (CVE®)\footnote{\url{https://cve.mitre.org/index.html}}} : is a list of known security software venerabilities (available in XML format). To each vulnerability, a unique standard identifiers (e.g. CVE-2016-7892) is assigned. The CVE standard identifiers allow the data exchange between security solutions and vulnerability repositories. The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}.
+ 
+ \subsection{Common Vulnerabilities and Exposures (CVE®)} 
+ CVE\footnote{\url{https://cve.mitre.org/index.html}} is a list of known security software venerabilities (available in XML format). To each vulnerability, a unique standard identifiers (e.g. CVE-2016-7892) is assigned. The CVE standard identifiers allow the data exchange between security solutions and vulnerability repositories. The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}.
 
  The CVE list is not a vulnerability repository\footnote{The list of vulnerability databases list can be found at \url{https://cve.mitre.org/compatible/product_type.html\#Vulnerability Database}}, it is just a list of identifiers for the known vulnerabilities with basic information such as standard identifier and description. It is designed to allow the linking between different vulnerability repositories. The NVD provides an XML vulnerability feed that is built based on the CVE list. The CVE entries enriched with additional information by NVD such as corresponding CVSS base score and CPE mapping.    
  
- \item \textbf{Common Platform Enumeration (CPE™)}: is the identifiers dictionary for all software products and applications,operating systems and hardware devices. The official CPE dictionary\footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} provided in XML format by NVD.
+ \subsection{Common Platform Enumeration (CPE™)}
+ CPE is the identifiers dictionary for all software products and applications,operating systems and hardware devices. The official CPE dictionary\footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} provided in XML format by NVD.
   
- \item \textbf{Common Vulnerability Scoring System (CVSS)} \footnote{\url{https://www.first.org/cvss}} : is a scoring system for the software  vulnerabilities, which provides a relative severity for the vulnerability.
- \end{enumerate}
+ \subsection{Common Vulnerability Scoring System (CVSS)}
+ CVSS\footnote{\url{https://www.first.org/cvss}} is a scoring system for the software  vulnerabilities, which provides a relative severity for the vulnerability.
+ 
 
 \section{Automated	Software	Vulnerability	Management	Approaches}
  
@@ -139,7 +141,7 @@ This section introduces the most related standard for the software vulnerability
     \end{figure}
    
    
-   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the stored information from the first stage to uniquely identify them. The CPE dictionary \footnote{\url{https://nvd.nist.gov/cpe.cfm}} is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated. '\newpage The CP-ID with the highest matching rate is selected and added to asset stored information (represented by an XML field cpe) as seen in Figure 2.
+   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the stored information from the first stage to uniquely identify them. The Official CPE dictionary is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated. '\newpage The CP-ID with the highest matching rate is selected and added to asset stored information (represented by an XML field cpe) as seen in Figure 2.
    
     \begin{figure}
     \centering
@@ -182,7 +184,7 @@ The proposed system offers the functionality of monitoring certain software comp
  \newpage  
 \section{Conclusion}
 
-\par The importance of the automatic detection and monitoring of vulnerable softwares inside organizations to avoid cyber-attacks introduces the need for software vulnerability management systems. The two approaches described in Section 4 allow enterprises to get informed about software vulnerabilities of their IT assets. Nonetheless, they do not replace the normal security solutions and policies but they just complete their work and ensure an efficient level of security inside the organization. The vulnerability repositories (e.g NVD) and the open standards of the SCAP protocol play the main role in developing software vulnerability management systems.   
+\par The importance of the automatic detection and monitoring of vulnerable softwares inside organizations to avoid cyber-attacks introduces the need for software vulnerability management systems. The two approaches described in Section 4 allow enterprises to get informed about software vulnerabilities of their IT assets. Nonetheless, they do not replace the normal security solutions and policies but they just complete their work and ensure an efficient level of security inside the organization. The vulnerability repositories (e.g. NVD) and the open standards of the SCAP protocol play the main role in developing software vulnerability management systems.   
 
 
 \newpage

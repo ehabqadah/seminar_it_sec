@@ -1,10 +1,13 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.0.1}
 \contentsline {section}{\numberline {2}Software Vulnerability Management}{3}{section.0.2}
-\contentsline {section}{\numberline {3}Standards Used in Software Vulnerability Management}{3}{section.0.3}
-\contentsline {section}{\numberline {4}Automated Software Vulnerability Management Approaches}{4}{section.0.4}
+\contentsline {section}{\numberline {3}Standards Used in Software Vulnerability Management}{4}{section.0.3}
+\contentsline {subsection}{\numberline {3.1}Common Vulnerabilities and Exposures (CVE®)}{4}{subsection.0.3.1}
+\contentsline {subsection}{\numberline {3.2}Common Platform Enumeration (CPE™)}{4}{subsection.0.3.2}
+\contentsline {subsection}{\numberline {3.3}Common Vulnerability Scoring System (CVSS)}{4}{subsection.0.3.3}
+\contentsline {section}{\numberline {4}Automated Software Vulnerability Management Approaches}{5}{section.0.4}
 \contentsline {subsection}{\numberline {4.1}Software Vulnerability Management Using Open Standards}{5}{subsection.0.4.1}
 \contentsline {subsubsection}{\numberline {4.1.1}System Components \newline }{5}{subsubsection.0.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}System Workflow \newline }{5}{subsubsection.0.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2}System Workflow \newline }{6}{subsubsection.0.4.1.2}
 \contentsline {subsection}{\numberline {4.2}Software Vulnerability Management Using Social Networks Information }{7}{subsection.0.4.2}
 \contentsline {section}{\numberline {5}Discussion}{8}{section.0.5}
 \contentsline {section}{\numberline {6}Conclusion}{9}{section.0.6}
