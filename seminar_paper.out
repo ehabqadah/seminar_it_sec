@@ -1,10 +1,10 @@
 \BOOKMARK [1][-]{section.0.1}{Introduction}{}% 1
-\BOOKMARK [2][-]{subsection.0.1.1}{Software Vulnerability Management}{section.0.1}% 2
-\BOOKMARK [1][-]{section.0.2}{Automated Software Vulnerability Management System}{}% 3
-\BOOKMARK [2][-]{subsection.0.2.1}{System Components}{section.0.2}% 4
-\BOOKMARK [2][-]{subsection.0.2.2}{System Workflow}{section.0.2}% 5
-\BOOKMARK [1][-]{section.0.3}{Standards}{}% 6
-\BOOKMARK [2][-]{subsection.0.3.1}{SCAP}{section.0.3}% 7
-\BOOKMARK [1][-]{section.0.4}{Alternatives to the NVD Repository}{}% 8
+\BOOKMARK [1][-]{section.0.2}{Software Vulnerability Management}{}% 2
+\BOOKMARK [1][-]{section.0.3}{Standards Used in Software Vulnerability Management}{}% 3
+\BOOKMARK [1][-]{section.0.4}{Automated Software Vulnerability Management Approaches}{}% 4
+\BOOKMARK [2][-]{subsection.0.4.1}{Software Vulnerability Management Using Open Standards}{section.0.4}% 5
+\BOOKMARK [3][-]{subsubsection.0.4.1.1}{System Components }{subsection.0.4.1}% 6
+\BOOKMARK [3][-]{subsubsection.0.4.1.2}{System Workflow }{subsection.0.4.1}% 7
+\BOOKMARK [2][-]{subsection.0.4.2}{Software Vulnerability Management Using Social Networks Information }{section.0.4}% 8
 \BOOKMARK [1][-]{section.0.5}{Discussion}{}% 9
 \BOOKMARK [1][-]{section.0.6}{Conclusion}{}% 10
