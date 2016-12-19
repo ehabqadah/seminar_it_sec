@@ -4,6 +4,7 @@
 \usepackage{listings}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
+
 %
 \begin{document}
 \begin{flushleft}
@@ -103,11 +104,11 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 \par
  The proposed system first collects information about the list of IT assets inside an organization, afterwards the system stores the collected information about the organization's IT assets and uses it to determine the corresponding standards identifiers (CPE-IDs) for each IT asset. Then the system utilizes these identifiers to check the existence of related vulnerabilities by querying vulnerability repositories with using the computed identifiers as keys. Finally, an alert about the identified security defects will be sent to the system administrator by the proposed system.
     
-\subsubsection {System Components \newline}
+\subsubsection {System Components }
 
-\par
+\begin{flushleft}
  The system proposed in \cite{paper1} is composed by 4 elements, which are described in the following:
-
+\end{flushleft}
 
  \begin{enumerate}
  \item \textbf{Terminals}: this element includes all electronic devices used by the organization's employees to perform their job activities. In most cases, an agent is installed on a terminal to collect information about the installed IT assets on it. The collected information is then sent to the asset management server.
@@ -121,10 +122,11 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
  \end{enumerate}
  
 
-\subsubsection{System Workflow \newline}
+\subsubsection{System Workflow }
 
-\par In this section the workflow of the proposed system in \cite{paper1} is described.
- 
+\begin{flushleft}
+In this section the workflow of the proposed system in \cite{paper1} is described.
+ \end{flushleft}
 \begin{enumerate}
  \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information on the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 1.  \footnote{Based on figure 4 in \cite{paper1} with omitting some details} 
 
