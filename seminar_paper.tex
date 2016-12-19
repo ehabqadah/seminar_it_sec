@@ -67,19 +67,17 @@ One of the main concerning areas for organizations is software vulnerability ana
  installed in their networks and to match that information with the vulnerabilities. 
  \par In this paper, we beginning with a briefly explanation of the software vulnerability 
  management concept. Then, we describe standards used to unique identify software products 
- and vulnerabilities. Thereafter, we present two approaches to detect software venerabilities. Finally, we discuss these approaches and give the conclusion.
+ and vulnerabilities. Thereafter, we present two approaches of automated software vulnerability management. Next, we discuss key points in these approaches. Finally, we give the conclusion.
        
 \section{Software Vulnerability Management}
 
-In this section, we discuss two basic definitions related to the software vulnerability analysis.
-\par Vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information of services by attackers. \cite{vuln}.  
+In this section, we shortly describe the concept of Software Vulnerability Management. However, we first define what a software vulnerability is. In the field of information technology, a vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information of services by attackers. \cite{vuln}.  
 
 \par The Software Vulnerability Management concept can be defined as the process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrators or installing the corresponding patches to avoid possible threats based on those vulnerabilities. 
 
-\newpage
 \section{Standards	Used	in	Software	Vulnerability	Management}
  
- In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}.This protocol is a collection of open standards and enumerations for the	security related software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
+ In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}. This protocol is a collection of open standards and enumerations for the	security related software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
  SCAP is provided	and	maintained	by	the	National	Institute	of	Standards	and	Technology (NIST)\footnote{\url{https://www.nist.gov/}}.	The	repository	of	the	SCAP	content	is	NVD, that provides	a data	feed for each SCAP	standard	
  which can	be	publicly accessed	by	the	security	community.	Also NVD is	managed	by NIST.
  
@@ -205,8 +203,9 @@ The proposed system offers the functionality of monitoring certain software comp
 
 %
 
+
 \bibitem[1]{symantec} 
-Symantec: Internet Security Threat Report Vol. 21, April 2016,
+Internet Security Threat Report. (2016). 21st ed. Symantec.
 \\\texttt{https://www.symantec.com/content/dam/symantec/docs/reports/istr-21-2016-en.pdf}
 \bibitem[2]{vuln}
 G Stoneburner, A Goguen, and A Feringa, “Risk Management Guide
