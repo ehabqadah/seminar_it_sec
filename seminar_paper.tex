@@ -69,7 +69,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 \begin{figure}
  
   \centering
-    \includegraphics[width=0.5\textwidth]{SVM.png}
+    \includegraphics[width=0.5\textwidth, height=0.4\textheight]{SVM.png}
      \caption{Basic operations of Software Vulnerability Management System}
 \end{figure}
 
@@ -84,9 +84,28 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
  The CVE list is not a vulnerability repository, but a list of identifiers (i.e., CVE names) for  known vulnerabilities with basic information such as standard identifier and description. The CVE common identifiers of security vulnerabilities allow the linking between different vulnerability repositories. For instance, NVD, JVN, and Symantec Security Response Web site \footnote{\url{https://www.symantec.com/security_response/landing/vulnerabilities.jsp}}. The linking between these databases allows to aggregate information about a vulnerability form all of them. 
  
- NVD provides an XML vulnerability feed that is built based on the CVE list. According to the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 shows an example CVE entry (CVE-2014-6348) with a basic information obtained from NVD XML feed.
+ NVD provides an XML vulnerability feed that is built based on the CVE list. According to the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 provides an example Of venerability entry (CVE-2014-3299) with subset of information obtained from NVD XML feed.
 
- 
+ \begin{figure}
+   
+      \lstset{language=XML}
+       \begin{lstlisting}
+     <entry id="CVE-2014-3299">
+     <vuln:vulnerable-software-list><vuln:product>cpe:/o:
+     cisco:ios:</vuln:product></vuln:vulnerable-software-list>
+     <vuln:cve-id>CVE-2014-3299</vuln:cve-id>
+     <vuln:references xml:lang="en" reference_type=
+     "VENDOR_ADVISORY"><vuln:source>BID</vuln:source>
+     <vuln:reference href="www.securityfocus.com/bid/68177"
+     xml:lang="en">68177</vuln:reference></vuln:references>
+     <vuln:summary>Cisco IOS allows remote authenticated users 
+     tocause a denial of service (device reload) via malformed
+      IPsec packets, aka Bug ID CSCui79745.
+      </vuln:summary>
+     </entry>
+       \end{lstlisting}
+      \caption{Basic content of CVE-2014-3299 entry, other attributes are omitted.}
+       \end{figure}
  
  \subsection{Common Platform Enumeration (CPE™)}
  CPE\footnote{\url{https://cpe.mitre.org/specification/}} is the identifiers dictionary for the software products and applications, operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} provided in XML format by NVD and it is updated frequently.
@@ -98,26 +117,51 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
    
      \lstset{language=XML}
       \begin{lstlisting}
-     <cpe-item name="cpe:/o:canonical:ubuntu_linux:10.04::~~lts~~">
-      <title xml:lang="en-US">Canonical Ubuntu Linux 10.04 LTS
-      </title>
-      <references>
-      <reference href="http://www.canonical.com/">Vendor
-      </reference>
-      </references>
-      <cpe-23:cpe23-item
-      name="cpe:2.3:o:canonical:ubuntu_linux:10.04:*:*:*:lts:*:*:*"/>
+     <cpe-item name =
+     "cpe:/o:canonical:ubuntu_linux:10.04::~~lts~~">
+     <title xml:lang="en-US">
+     Canonical Ubuntu Linux 10.04 LTS
+     </title>
+     <references><reference 
+     href="http://www.canonical.com/">Vendor
+     </reference>
+     </references>
+     <cpe-23:cpe23-item name =
+    "cpe:2.3:o:canonical:ubuntu_linux:10.04:*:*:*:lts:*:*:*"/>
      </cpe-item>
       \end{lstlisting}
-     \caption{An example of CPE Dictionary entry for the "Ubuntu Linux 10.04 LTS" operating system.}
+     \caption{An example of CPE Dictionary entry - "Ubuntu Linux 10.04 LTS" operating system.}
       \end{figure}
   
   
  \subsection{Common Vulnerability Scoring System (CVSS)}
  
- \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity for the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST)\footnote{\url{https://www.first.org/}}.
+ \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity for the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST).
  
- \par CVSS consists set of different metrics. For example, attack complexity, integrity impact, and report confidence. The CVSS score value in range from 0 to 10  is calculated using a formula that relays on the metrics value.
+ \par CVSS consists set of different metrics. For example, attack complexity, integrity impact, and report confidence. The CVSS score value in range from 0 to 10  is calculated using a formula that relays on the metrics value. An CVSS version 2 overall and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) is shown in Figure 4.
+ 
+ \begin{figure}
+    \centering
+      \lstset{language=XML}
+       \begin{lstlisting}
+ <vuln:cvss>
+ <cvss:base_metrics>
+ <cvss:score>6.8</cvss:score>
+ <cvss:access-vector>NETWORK</cvss:access-vector>
+ <cvss:access-complexity>LOW</cvss:access-complexity>
+ <cvss:authentication>SINGLE_INSTANCE</cvss:authentication>
+ <cvss:confidentiality-impact>NONE</cvss:confidentiality-impact>
+ <cvss:integrity-impact>NONE</cvss:integrity-impact>
+ <cvss:availability-impact>COMPLETE</cvss:availability-impact>
+ <cvss:source>http://nvd.nist.gov</cvss:source>
+ <cvss:generated-on-datetime>2017-01-11T14:37:58.247-05:00
+ </cvss:generated-on-datetime>
+ </cvss:base_metrics>
+ </vuln:cvss>
+ 
+       \end{lstlisting}
+      \caption{CVSS score and metrics of the "CVE-2014-3299" vulenrability provided by NVD xml feed.}
+       \end{figure}
 
 \section{Software	Vulnerability	Management	Approaches}
  
@@ -126,7 +170,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
 \par This section presents a system proposed by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and repositories. They idea behind using open standards and information sources is to develop a system that can be used  by a wide range of organizations.
 \par
- First, the system collects information about the list of IT assets inside an organization. Afterwards, the system stores the collected information about the organization's IT assets and uses it to determine the corresponding  identifiers (CPE-IDs) for each IT asset. Then, the system utilizes these identifiers to check the existence of related vulnerabilities by querying the system's vulnerability knowledge base with using the computed identifiers as keys. Finally, an alert about the identified vulnerable software will be sent to the system administrator.
+ First, the system collects information about the list of IT assets inside an organization. Afterwards, the system stores the collected information and uses it to determine CPE-ID for each IT asset. Then, the system utilizes these identifiers to check the existence of related vulnerabilities by querying the system's vulnerability knowledge base with using the computed identifiers as keys. Finally, an alert about the identified vulnerable software will be sent to the system administrator.
     
 \subsubsection {System Components }
 
@@ -152,7 +196,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 In this section the workflow of the proposed system in \cite{paper1} is described.
  \end{flushleft}
 \begin{enumerate}
- \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information of the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 4.  \footnote{Based on figure 4 in \cite{paper1} with omitting some details} 
+ \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information of the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 5.  \footnote{Based on figure 4 in \cite{paper1} with omitting some details} 
 
  \begin{figure}
  \centering
@@ -173,7 +217,7 @@ In this section the workflow of the proposed system in \cite{paper1} is describe
    \caption{An example of collected information by the proposed system for an installed software on some terminal.}
     \end{figure}
    
-   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the information  collected in the first step to uniquely identify them. The Official CPE dictionary is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated.  The CPE-ID with the highest matching rate is selected and added to the XML document of the asset. Figure 5 shows a CPE-ID which was assigned to an asset. In this example the matching rate of CPE-ID is 7.65.
+   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the information  collected in the first step to uniquely identify them. The Official CPE dictionary is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated.  The CPE-ID with the highest matching rate is selected and added to the XML document of the asset. Figure 6 shows a CPE-ID which was assigned to an asset. In this example the matching rate of CPE-ID is 7.65.
    
     \begin{figure}
     \centering

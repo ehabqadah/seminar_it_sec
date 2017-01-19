@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  19 JAN 2017 20:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  19 JAN 2017 22:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -375,22 +375,38 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: SVM.png Graphic file (type png)
  <use SVM.png>
 Package pdftex.def Info: SVM.png used on input line 72.
-(pdftex.def)             Requested size: 173.56177pt x 269.69331pt.
+(pdftex.def)             Requested size: 173.55984pt x 219.65442pt.
  [2 <./SVM.png>]
 Missing character: There is no Â in font cmbx10!
 Missing character: There is no ® in font cmbx10!
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 93.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 93.
 Missing character: There is no â in font cmbx10!
 Missing character: There is no „ in font cmbx10!
 Missing character: There is no ¢ in font cmbx10!
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 94.
+ [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 113.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 94.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 113.
 
-Overfull \hbox (11.70334pt too wide) in paragraph at lines 93--96
+Overfull \hbox (11.70334pt too wide) in paragraph at lines 112--115
 \OT1/cmr/m/n/10 (URI), it fol-lows the struc-ture of \OT1/cmr/bx/n/10 cpe:/ \OM
 S/cmsy/b/n/10 f\OT1/cmr/bx/n/10 part\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\OMS/cm
 sy/b/n/10 f\OT1/cmr/bx/n/10 vendor\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\OMS/cmsy
@@ -399,56 +415,40 @@ b/n/10 f\OT1/cmr/bx/n/10 version\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :
  []
 
 
-Overfull \hbox (3.93185pt too wide) in paragraph at lines 93--96
+Overfull \hbox (3.93185pt too wide) in paragraph at lines 112--115
 \OT1/cmr/bx/n/10 "part":"vendor":"product":"version": "up-date":"edition":"lang
 " \OT1/cmr/m/n/10 (e.g.,
  []
 
 
-Overfull \hbox (1.06052pt too wide) in paragraph at lines 93--96
+Overfull \hbox (1.06052pt too wide) in paragraph at lines 112--115
 \OT1/cmr/m/n/10 cpe:2.3:o:microsoft:windows[]2000:*:sp4:pro:en-US), the new str
 ing bind-ing is just
  []
 
-[3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-)
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 101.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 101.
-
-Overfull \hbox (24.72769pt too wide) in paragraph at lines 101--102
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
 
-Overfull \hbox (35.82773pt too wide) in paragraph at lines 109--110
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (8.07764pt too wide) in paragraph at lines 153--154
+[][][][][][][][][][][][][][][][] 
  []
 
-[4] [5]
-Overfull \hbox (0.61884pt too wide) in paragraph at lines 188--189
+[5] [6]
+Overfull \hbox (0.61884pt too wide) in paragraph at lines 232--233
 []\OT1/cmr/bx/n/10 Finding vul-ner-a-bil-ity in-for-ma-tion\OT1/cmr/m/n/10 : th
 e sys-tem uses the de-ter-mined CPE-
  []
 
-[6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 []\OT1/cmr/m/n/9 Symantec. In-ter-net Se-cu-rity Threat Re-port, Vol. 21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 \OT1/cmr/m/n/9 https://www.symantec.com/content/dam/symantec/docs/reports/istr-
 21-
  []
@@ -459,22 +459,21 @@ Missing character: There is no œ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no  in font cmr9!
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
  (./seminar_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 293.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 293.
 Package rerunfilecheck Info: File `seminar_paper.out' has not changed.
 (rerunfilecheck)             Checksum: C5B017C4BE05F76F59F8AF825AAD8CF4;1061.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
  ) 
 Here is how much of TeX's memory you used:
- 6866 strings out of 495028
- 100285 string characters out of 6181496
- 215135 words of memory out of 5000000
- 9949 multiletter control sequences out of 15000+600000
+ 6924 strings out of 495028
+ 101162 string characters out of 6181496
+ 220987 words of memory out of 5000000
+ 9975 multiletter control sequences out of 15000+600000
  7712 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  29i,9n,49p,1304b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -489,10 +488,10 @@ public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on seminar_paper.pdf (9 pages, 193197 bytes).
+Output written on seminar_paper.pdf (9 pages, 198098 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 109 named destinations out of 1000 (max. 500000)
  110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
