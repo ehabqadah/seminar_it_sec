@@ -2,6 +2,7 @@
 \usepackage{llncsdoc}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
+\usepackage{graphicx}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
 
@@ -48,14 +49,14 @@ On a daily basis, new security flaws are discovered in software applications. Th
  reached 5,585, and 54 zero-day vulnerabilities were discovered. For cybercriminals 
  unpatched vulnerabilities represent an opportunity to carry out their attacks successfully. 
  Therefore, in order to prevent, for example, information theft, organizations require of 
- effective and efficient methods to automatically detect vulnerabilities in software installed in 
+ effective and efficient methods to automatically detect vulnerability in a software that is installed in 
  their networks. After detecting a software vulnerability, immediate actions (e.g., installing 
  patches, or preventing users from employing the vulnerable software) must be taken. 
  \par To automatically detect software vulnerabilities, organizations need a reliable source of 
  known vulnerabilities. Some solutions employ public repositories like the National 
- Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. Then, organizations gather information on the software 
+ Vulnerability Database (NVD)\footnote{\url{https://nvd.nist.gov/}}. Then, organizations gather information on the software list that  
  installed in their networks to match that information with the vulnerabilities. 
- \par In this paper, we beginning with a briefly explanation of the software vulnerability 
+ \par In this paper, we beginning with a brief explanation of the software vulnerability 
  management concept. Then, we describe standards used to unique identify software products 
  and vulnerabilities. Thereafter, we present two approaches for automated software vulnerability management. Next, we discuss key points of these approaches. Finally, we give the conclusion.
        
@@ -63,7 +64,14 @@ On a daily basis, new security flaws are discovered in software applications. Th
 
 In this section, we shortly describe the concept of Software Vulnerability Management. Before doing this we define what a software vulnerability is. In the field of information technology, a vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information or services by attackers \cite{vuln}.  
 
-\par The Software Vulnerability Management concept can be defined as the process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets and  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities.
+\par The Software Vulnerability Management concept can be defined as the process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets; gathering the IT assets information and store it. Then,  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities. Figure 1 shows the basic operations of the Software Vulnerability Management System.
+
+\begin{figure}
+ 
+  \centering
+    \includegraphics[width=0.5\textwidth]{SVM.png}
+     \caption{Basic operations of Software Vulnerability Management System}
+\end{figure}
 
 \section{Standards	Used	in	Software	Vulnerability	Management}
  
@@ -121,7 +129,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 In this section the workflow of the proposed system in \cite{paper1} is described.
  \end{flushleft}
 \begin{enumerate}
- \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information of the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 1.  \footnote{Based on figure 4 in \cite{paper1} with omitting some details} 
+ \item \textbf{Compile IT assets information}: the system starts with the process of collecting the information of the organization's IT assets. This is achieved by sending requests to the agents installed on the terminals, or by monitoring the network. The agents gather the information of the installed software, and then, an XML document is generated. This document contains, for instance, the software name, version, publisher, and installation date, as shown in Figure 2.  \footnote{Based on figure 4 in \cite{paper1} with omitting some details} 
 
  \begin{figure}
  \centering
@@ -142,7 +150,7 @@ In this section the workflow of the proposed system in \cite{paper1} is describe
    \caption{An example of collected information by the proposed system for an installed software on some terminal.}
     \end{figure}
    
-   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the information  collected in the first step to uniquely identify them. The Official CPE dictionary is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated.  The CPE-ID with the highest matching rate is selected and added to the XML document of the asset. Figure 2 shows a CPE-ID which was assigned to an asset. In this example the matching rate of CPE-ID is 7.65.
+   \item \textbf{Resolving of IT asset identifier}: the system determines the CPE-IDs for the IT assets using the information  collected in the first step to uniquely identify them. The Official CPE dictionary is obtained from NVD repository and used as reference CPE-IDs for the proposed system. The basic algorithm builds a query from the collected software information like name, version and owner, then a matching rate (percentage of the similar characters between the query and CPE-ID) for all CPE-IDs in the CPE dictionary is calculated.  The CPE-ID with the highest matching rate is selected and added to the XML document of the asset. Figure 3 shows a CPE-ID which was assigned to an asset. In this example the matching rate of CPE-ID is 7.65.
    
     \begin{figure}
     \centering
