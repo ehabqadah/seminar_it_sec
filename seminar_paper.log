@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  19 JAN 2017 16:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  19 JAN 2017 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,28 +380,28 @@ Package pdftex.def Info: SVM.png used on input line 72.
 Missing character: There is no Â in font cmbx10!
 Missing character: There is no ® in font cmbx10!
 
-[3] <cve.png, id=118, 1224.575pt x 522.95375pt>
+[3] <cve.png, id=119, 987.69pt x 427.5975pt>
 File: cve.png Graphic file (type png)
  <use cve.png>
-Package pdftex.def Info: cve.png used on input line 92.
-(pdftex.def)             Requested size: 347.12354pt x 148.23743pt.
+Package pdftex.def Info: cve.png used on input line 91.
+(pdftex.def)             Requested size: 347.12354pt x 150.27467pt.
 Missing character: There is no â in font cmbx10!
 Missing character: There is no „ in font cmbx10!
 Missing character: There is no ¢ in font cmbx10!
 
-Overfull \hbox (20.95943pt too wide) in paragraph at lines 97--98
+Overfull \hbox (20.95943pt too wide) in paragraph at lines 96--97
 \OT1/cmr/m/n/10 CPE[][][] is the iden-ti-fiers dic-tio-nary for all soft-ware p
 rod-ucts and ap-pli-ca-tions,operating
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 99.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 99.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 98.
 
-Overfull \hbox (15.59224pt too wide) in paragraph at lines 98--100
+Overfull \hbox (15.59224pt too wide) in paragraph at lines 97--99
 \OT1/cmr/m/n/10 (URI), it fol-lows the struct-ture of \OT1/cmr/bx/n/10 cpe:/ \O
 MS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 part\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\OMS/c
 msy/b/n/10 f\OT1/cmr/bx/n/10 vendor\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\OMS/cms
@@ -410,7 +410,7 @@ y/b/n/10 f\OT1/cmr/bx/n/10 product\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\OMS/cmsy
  []
 
 
-Overfull \hbox (7.004pt too wide) in paragraph at lines 98--100
+Overfull \hbox (7.004pt too wide) in paragraph at lines 97--99
 \OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 update\OMS/cmsy/b/n/10 g\OT1/cmr/bx/n/10 :\O
 MS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 edition\OMS/cmsy/b/n/10 g \OT1/cmr/m/n/10 (e.g
 ., cpe:/o:microsoft:windows[]2000::sp4:pro). The \OMS/cmsy/b/n/10 f\OT1/cmr/bx/
@@ -424,30 +424,27 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 147.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 146.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 147.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 146.
 
-Overfull \hbox (0.61884pt too wide) in paragraph at lines 175--176
+Overfull \hbox (0.61884pt too wide) in paragraph at lines 174--175
 []\OT1/cmr/bx/n/10 Finding vul-ner-a-bil-ity in-for-ma-tion\OT1/cmr/m/n/10 : th
 e sys-tem uses the de-ter-mined CPE-
  []
 
-[6]
-Underfull \vbox (badness 4726) has occurred while \output is active []
-
- [7]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 []\OT1/cmr/m/n/9 Symantec. In-ter-net Se-cu-rity Threat Re-port, Vol. 21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 \OT1/cmr/m/n/9 https://www.symantec.com/content/dam/symantec/docs/reports/istr-
 21-
  []
@@ -459,20 +456,20 @@ Missing character: There is no œ in font cmr9!
 Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no  in font cmr9!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
  (./seminar_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `seminar_paper.out' has not changed.
 (rerunfilecheck)             Checksum: C5B017C4BE05F76F59F8AF825AAD8CF4;1061.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 236.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
  6856 strings out of 495028
  100122 string characters out of 6181496
- 215885 words of memory out of 5000000
+ 214575 words of memory out of 5000000
  9944 multiletter control sequences out of 15000+600000
  7712 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -488,7 +485,7 @@ public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9
 .pfb>
-Output written on seminar_paper.pdf (9 pages, 256500 bytes).
+Output written on seminar_paper.pdf (9 pages, 247953 bytes).
 PDF statistics:
  257 PDF objects out of 1000 (max. 8388607)
  221 compressed objects within 3 object streams
