@@ -75,39 +75,38 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
 \section{Standards	Used	in	Software	Vulnerability	Management}
  
- In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}. This protocol is a collection of open standards and enumerations for the	security  software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
- SCAP is provided	and	maintained	by	the	National	Institute	of	Standards	and	Technology (NIST)\footnote{\url{https://www.nist.gov/}}. The SCAP	content	is	publicly accessible via  NVD, which is also managed	by NIST.
+ In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol. This protocol is a collection of open standards and enumerations for the	security  software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
+ SCAP is provided	and	maintained	by	the	National	Institute	of	Standards	and	Technology (NIST). The SCAP	content	is	publicly accessible via  NVD, which is also managed	by NIST.
  
  
  \subsection{Common Vulnerabilities and Exposures (CVE®)} 
- CVE\footnote{\url{https://cve.mitre.org/index.html}} is a list of known security software venerabilities (available in XML format). To each vulnerability, a unique standard identifiers (e.g., CVE-2016-7892) is assigned. The CVE standard identifiers allow the data exchange between security solutions and vulnerability repositories (e.g., NVD, Japan Vulnerability Notes (JVN)\footnote{\url{https://jvn.jp/en/}} ). The CVE list is managed by The MITRE Corporation\footnote{\url{https://www.mitre.org/}}.
+ CVE\footnote{\url{https://cve.mitre.org/index.html}} is a list of known security software venerabilities (available in XML format). To each vulnerability, a unique standard identifier (e.g., CVE-2016-7892) is assigned. The CVE standard identifiers allow the data exchange between security solutions and vulnerability repositories (e.g., NVD, Japan Vulnerability Notes (JVN)\footnote{\url{https://jvn.jp/en/}} ). The CVE list is managed by The MITRE Corporation.
 
- The CVE list is not a vulnerability repository\footnote{The list of vulnerability databases list can be found at \url{https://cve.mitre.org/compatible/product_type.html\#Vulnerability Database}}, but a list of identifiers (i.e., CVE names) for  known vulnerabilities with basic information such as standard identifier and description. The CVE common identifiers of security vulnerabilities allow the linking between different vulnerability repositories. For example, NVD, JVN, and Symantec Security Response Web site \footnote{\url{https://www.symantec.com/security_response/landing/vulnerabilities.jsp}}. The linking between these databases allows to aggregate information about a vulnerability form all of them. 
+ The CVE list is not a vulnerability repository, but a list of identifiers (i.e., CVE names) for  known vulnerabilities with basic information such as standard identifier and description. The CVE common identifiers of security vulnerabilities allow the linking between different vulnerability repositories. For instance, NVD, JVN, and Symantec Security Response Web site \footnote{\url{https://www.symantec.com/security_response/landing/vulnerabilities.jsp}}. The linking between these databases allows to aggregate information about a vulnerability form all of them. 
  
- NVD provides an XML vulnerability feed that is built based on the CVE list. Based on the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 shows an example CVE entry (CVE-2014-6348) with basic information obtained from NVD XML feed.
-  \newpage
-  \begin{figure}
-    \centering
-      \includegraphics[width=\textwidth]{cve.png}
-       \caption{Basic information of CVE-2014-6348 entry, some other information are omitted. }
-  \end{figure}
+ NVD provides an XML vulnerability feed that is built based on the CVE list. According to the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 shows an example CVE entry (CVE-2014-6348) with a basic information obtained from NVD XML feed.
+
+ 
  
  \subsection{Common Platform Enumeration (CPE™)}
- CPE\footnote{\url{https://cpe.mitre.org/specification/}} is the identifiers dictionary for the software products and applications,operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} provided in XML format by NVD and it is updated frequently.
+ CPE\footnote{\url{https://cpe.mitre.org/specification/}} is the identifiers dictionary for the software products and applications, operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} provided in XML format by NVD and it is updated frequently.
  \par The CPE ID based upon the generic syntax for Uniform Resource Identifiers (URI), it follows the structure of \textbf{cpe:/ \{part\}:\{vendor\}:\{product\}:\{version\}:
  \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/o:microsoft:windows\_2000::sp4:pro:en-US). The \textbf{\{part\}} component is on of the following three values, h for hardware, o for operating system, and a for application, and the other attributes based on the product specification like the \textbf{\{vendor\}} is filled with the name of the product's vendor, and the unspecified attributes represents any value as in the above example [version=ANY]. And  the new formated string binding in version 2.3  is similar to the URI binding that based on the following syntax \textbf{cpe:2.3: "part":"vendor":"product":"version":
   "update":"edition":"lang"} (e.g., cpe:2.3:o:microsoft:windows\_2000:*:sp4:pro:en-US), the new string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. Figure 3 provides an example of CPE entry, that contains information about CPE ID in URI and formatted string bindings, and the title and related references of the described product: 
   
   \begin{figure}
-   \centering
+   
      \lstset{language=XML}
       \begin{lstlisting}
-     <cpe-item name="cpe:/o:canonical:ubuntu_linux:10.04::~~lts~~~">
-     	<title xml:lang="en-US">Canonical Ubuntu Linux 10.04 LTS</title>
-     	<references>
-     		<reference href="http://www.canonical.com/">Vendor</reference>
-     	</references>
-     	<cpe-23:cpe23-item name="cpe:2.3:o:canonical:ubuntu_linux:10.04:*:*:*:lts:*:*:*"/>
+     <cpe-item name="cpe:/o:canonical:ubuntu_linux:10.04::~~lts~~">
+      <title xml:lang="en-US">Canonical Ubuntu Linux 10.04 LTS
+      </title>
+      <references>
+      <reference href="http://www.canonical.com/">Vendor
+      </reference>
+      </references>
+      <cpe-23:cpe23-item
+      name="cpe:2.3:o:canonical:ubuntu_linux:10.04:*:*:*:lts:*:*:*"/>
      </cpe-item>
       \end{lstlisting}
      \caption{An example of CPE Dictionary entry for the "Ubuntu Linux 10.04 LTS" operating system.}
@@ -116,7 +115,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
   
  \subsection{Common Vulnerability Scoring System (CVSS)}
  
- \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system for the software  vulnerabilities, which provides the characteristics and relative severity for the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST)\footnote{\url{https://www.first.org/}}.
+ \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity for the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST)\footnote{\url{https://www.first.org/}}.
  
  \par CVSS consists set of different metrics. For example, attack complexity, integrity impact, and report confidence. The CVSS score value in range from 0 to 10  is calculated using a formula that relays on the metrics value.
 
@@ -132,13 +131,13 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 \subsubsection {System Components }
 
 \begin{flushleft}
- The system proposed in \cite{paper1} is composed by 4 elements, which are described in the following:
+ The system is composed of 4 elements, which are described in the following:
 \end{flushleft}
 
  \begin{enumerate}
  \item \textbf{Terminals}: this element includes all electronic devices used by the organization's employees to perform their  activities. In most cases, an agent is installed on a terminal to collect information about the installed IT assets. The collected information is then sent to the asset management server.
  
- \item \textbf{Asset management server}: this component is responsible to communicate with the installed agents on the terminals to collect information of the IT assets, and it monitors and analyzes the organization's network traffic in order to collect information about the terminal's IT assets without installed agent. The collected information is then organized and stored using the system's schema. Also, the asset management server determines the IT asset standard identifier (CPE-IDs) using the collected information and appends this identifier to the  IT asset information. Furthermore, this element uses these identifiers to check the presence of a vulnerability by querying the vulnerability knowledge base.
+ \item \textbf{Asset management server}: this component is responsible to communicate with the installed agents on the terminals to collect information of the IT assets, and it monitors and analyzes the organization's network traffic in order to collect information about the terminal's IT assets that does not have an installed agent. The collected information is then organized and stored using the system's schema. Also, the asset management server determines the IT asset standard identifier (CPE-IDs) using the collected information and appends this identifier to the  IT asset information. Furthermore, this element uses these identifiers to check the presence of a vulnerability by querying the vulnerability knowledge base.
  
  \item \textbf{Vulnerability knowledge base}: is the local system's database for the vulnerability information contains data from  the following repositories: NVD, JVN.
  
@@ -160,15 +159,15 @@ In this section the workflow of the proposed system in \cite{paper1} is describe
    \lstset{language=XML}
     \begin{lstlisting}
    <assetInfo version="1">
-       <installedSoftwareInfo version="1">
-           <softwareInfo>
-               <name>Adobe Flash Player 23.0.0.205</name>
-               <version>23.0.0.205</version>
-               <publisher> Adobe Systems Software </publisher>
-               <size>0x24e23</size>
-               <installationDate>20161122</installationDate>
-           </softwareInfo>
-       </installedSoftwareInfo>
+    <installedSoftwareInfo version="1">
+    <softwareInfo>
+    <name>Adobe Flash Player 23.0.0.205</name>
+    <version>23.0.0.205</version>
+    <publisher> Adobe Systems Software </publisher>
+    <size>0x24e23</size>
+    <installationDate>20161122</installationDate>
+    </softwareInfo>
+    </installedSoftwareInfo>
    </assetInfo>
     \end{lstlisting}
    \caption{An example of collected information by the proposed system for an installed software on some terminal.}
@@ -180,8 +179,7 @@ In this section the workflow of the proposed system in \cite{paper1} is describe
     \centering
       \lstset{language=XML}
        \begin{lstlisting} 
-       <cpe id="cpe:/a:adobe:flash_player:23.0.0.205"
-       
+       <cpe id="cpe:/a:adobe:flash_player:23.0.0.205" 
         matchingRate="7.65"/>
        \end{lstlisting}
       \caption{Example of a calculated CPE-ID with its corresponding matching rate.}
@@ -198,7 +196,7 @@ In this section the workflow of the proposed system in \cite{paper1} is describe
 
 
 \par
-The proposed system takes the advantage of getting informed about vulnerable software earlier than the normal software vulnerabilities repositories. That is because software developers use the social media platforms and technical blogs to discuss the security software flaws and issues. On the contrary, the classical information sources (e.g., NVD) wait the availability of patches from the software vendor before publishing the vulnerability information.
+The proposed system takes the advantage of getting informed about vulnerable software earlier than the normal software vulnerabilities repositories. That is because software developers use the social media platforms and technical blogs to discuss the security software flaws and issues. On the contrary, the classical information sources (e.g., NVD) wait for the availability of patches from the software vendor before publishing the vulnerability information.
 
 \par The introduced system is called SMASH (Social Media Analysis for security on HANA), consists two subsystems data collection and processing. The data collection subsystem is responsible to gather the security information from the social media (Twitter \footnote{Twitter has been used in the proposed system prototype, but the technique is also applicable for other social media platforms.}), by searching the Twitter's stream content for related security information (by using security associated terms e.g., exploit) and store it in the local database to be utilized by the system later. The system also keeps a copy of the software vulnerabilities form NVD (XML vulnerability feed) to distinguish the new  vulnerabilities from already published ones.
 \par
@@ -212,7 +210,7 @@ The proposed system offers the functionality of monitoring certain software comp
 \par The system and technique proposed in Section 4.1 mainly focuses on the automation of software vulnerabilities management using open standards and public vulnerability repositories. The performed action by the proposed system in case of a vulnerability discovery can be considered as simple, since it does not follow the system requirement to avoid the manual operation. The system just sends an alert for the system's administrator who is responsible to perform the needed action based on the information provided by the system about the found vulnerable software. To deal with this drawback, the system can execute fast and immediate actions such as  blocking the corresponding terminal or even the vulnerable software  to ensure security inside the organization. Furthermore, the accuracy of the system's outcome mainly depends on the precision of the determination of the IT assets identifiers (i.e, CPE-IDs). The proposed system finds the CPE-ID for an IT asset based on a numerical method of calculating a matching rate. According to the authors, this approach does not always deliver accurate results. In addition, the determined CPE-IDs must be validated by the system before moving to the further steps to avoid unnecessary processing or the generation of invalid alerts.
 
 
-\par The system outlined in Section 4.2 proposes a method to find vulnerable software based on information obtained from Twitter. The system analyzes the social media content to extract the security vulnerability information. This approach allows detecting zero-day vulnerabilities which is not feasible using classical channels such as NVD. On the other hand, this approach may utilize non validated or wrong information to  identify security software vulnerabilities, this imposes the proposed system to contain a trust module of the extracted information from the social media data. Consequently, the accuracy of the system's output is  fundamentally affected by the strength of the trust model.
+\par The system outlined in Section 4.2 proposes a method to find vulnerable software based on information obtained from Twitter. The system analyzes the social media content to extract the security vulnerability information. This approach allows detecting zero-day vulnerabilities which is not feasible using classical channels such as NVD. On the other hand, this approach may utilize non- validated or wrong information to  identify security software vulnerabilities, this imposes the proposed system to contain a trust module of the extracted information from the social media data. Consequently, the accuracy of the system's output is  fundamentally affected by the strength of the trust model.
    
 \section{Conclusion}
 In this paper, we explore SCAP standards that related to software venerability management. And we present two approaches to implement software vulnerability management systems. First approach based on open standards (e.g., CPE, CVE) and open repositories (e.g., NVD). And the second one based on  security information obtained from social media.  
