@@ -112,8 +112,8 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
  \par The CPE ID format based on the generic syntax of Uniform Resource Identifiers (URI), it follows the structure of \textbf{cpe:/ \{part\}:\{vendor\}:\{product\}:
  \{version\}:
  \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/o:microsoft:windows\_2000:
- :sp4:pro:en-US). The \textbf{\{part\}} component is one of the following three values, h as hardware, o as operating system, and a as application, while the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value as in the above example [version=ANY]. And  the new formatted string binding in version 2.3  is similar to the URI binding that based on the following syntax \textbf{cpe:2.3: "part":"vendor":"product":"version":
-  "update":"edition":"lang"} (e.g., cpe:2.3:o:microsoft:windows\_2000:*:sp4:pro:en-US), the new string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. Figure 3 provides an example of CPE entry that contains URI and formatted string bindings values, and the title and related references of the described product: 
+ :sp4:pro:en-US). The \textbf{\{part\}} component is one of the following three values, h as hardware, o as operating system, and a as application, while the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value of the component as in the above example [version=ANY]. And  the new formatted string binding in version 2.3  is similar to the URI binding that based on the following syntax \textbf{cpe:2.3: "part":"vendor":"product":"version":
+  "update":"edition":"lang"} (e.g., cpe:2.3:o:microsoft:windows\_2000:*:sp4:pro:en-US), the new string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. Figure 3 provides an example of CPE entry that contains the URI and formatted string bindings values, and the title and related references of the described product: 
   
   \begin{figure}
    
@@ -138,9 +138,9 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
   
  \subsection{Common Vulnerability Scoring System (CVSS)}
  
- \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity for the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST).
+ \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity of the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST).
  
- \par CVSS consists set of different metrics. For example, attack complexity, integrity impact, and report confidence. The CVSS score value in range from 0 to 10  is calculated using a formula that relays on the metrics value. An CVSS version 2 overall and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) is shown in Figure 4.
+ \par CVSS entry consists set of different metrics. For example, access complexity, integrity impact, and access vector. The overall CVSS score value in the range from 0 to 10  is calculated using a formula that depends on the metrics. An example of CVSS version 2 overall score and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) are shown in Figure 4.
  
  \begin{figure}
     \centering
