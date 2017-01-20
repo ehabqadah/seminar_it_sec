@@ -2,6 +2,7 @@
 \usepackage{llncsdoc}
 \usepackage[hidelinks]{hyperref}
 \usepackage{listings}
+
 \usepackage{graphicx}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{4}
@@ -64,7 +65,7 @@ On a daily basis, new security flaws are discovered in software applications. Th
 
 In this section, we shortly describe the concept of Software Vulnerability Management. Before doing this we define what a software vulnerability is. In the field of information technology, a vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information or services by attackers \cite{vuln}.  
 
-\par The Software Vulnerability Management concept can be defined as the continuous process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets; gathering the IT assets information and store/update it. Then, search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities. Figure 1 shows the basic operations of the Software Vulnerability Management System. Figure 1 shows the  basic process flow of the Software Vulnerability Management System.
+\par The Software Vulnerability Management concept can be defined as the continuous process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets; gathering the IT assets information and store/update it. Then, search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities. Figure 1 shows the  basic process flow of the Software Vulnerability Management System.
 
 \begin{figure}
  
@@ -75,7 +76,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
 \section{Standards	Used	in	Software	Vulnerability	Management}
  
- In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP). This protocol is a collection of open standards and enumerations for the	security  software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
+ In	this section, we describe three	components which are part of the Security	 Content	Automation	Protocol (SCAP)\footnote{\url{https://scap.nist.gov/}}. This protocol is a collection of open standards and enumerations for the	security  software flaws	 and configuration issues, the exchange of these	standards	offers	the	ability	to	automate	vulnerability	management \cite{scap_doc}.		
  SCAP is provided	and	maintained	by	the	National	Institute	of	Standards	and	Technology (NIST). The SCAP	content	is	publicly accessible via  NVD, which is also managed	by NIST.
  
  
@@ -84,7 +85,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
  The CVE list is not a vulnerability repository, but a list of identifiers (i.e., CVE names) for  known vulnerabilities with basic information such as standard identifier and description. The CVE common identifiers of security vulnerabilities allow the linking between different vulnerability repositories (e.g., NVD, JVN, and Symantec Security Response Web site \footnote{\url{https://www.symantec.com/security_response/landing/vulnerabilities.jsp}}). The linking between these databases allows to aggregate information about a vulnerability form all of them. 
  
- NVD provides an XML vulnerability feed that is built based on the CVE list. According to the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 provides an example of venerability entry (CVE-2014-3299) with subset of information obtained from NVD XML feed.
+ NVD provides an XML vulnerability feed that is built based on the CVE list. According to the XML feed schema \footnote{\url{https://scap.nist.gov/schema/nvd/vulnerability_0.4.xsd}}, each vulnerability entry contains CVE id, summary, vulnerable software list, etc. Figure 2 provides an example of venerability entry (CVE-2014-3299) with subset of information obtained from the NVD XML feed.
 
  \begin{figure}
    
@@ -104,18 +105,20 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
       </vuln:summary>
      </entry>
        \end{lstlisting}
-      \caption{Basic content of CVE-2014-3299 entry, other attributes are omitted.}
+      \caption{Basic content of CVE-2014-3299 entry (other attributes are omitted).}
        \end{figure}
  
  \subsection{Common Platform Enumeration (CPE™)}
  CPE\footnote{\url{https://cpe.mitre.org/cpe/}} is the identifiers dictionary for the software products and applications, operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} is provided in XML format by NVD and it is updated frequently.
  \par The CPE naming specifications document \cite{cpe} defines two binding representations of the CPE-IDs. The first one, is formating the CPE-IDs based on the generic syntax of Uniform Resource Identifiers (URI), it follows the structure of \textbf{cpe:/\{part\}:\{vendor\}:\{product\}:
  \{version\}:
- \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/a:autodesk:autocad\_lt:2002:sp1::de). The \textbf{\{part\}} component is one of the following three values, h as hardware, o as operating system, and a as application, while the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value of the component as in the above example [edition=ANY]. 
- The second binding representation, is the  formatted string binding  which is similar to the URI binding, but it has additional attributes, namely target\_sw/hw to represent target software and hardware, sw\_edition as software edition, other for extra attributes. It follows the syntax of  \textbf{cpe:2.3: "part":"vendor":"product":"version":
-  "update":"edition":"lang":"sw\newline \_edition":"target\_sw":"
+ \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/a:autodesk:autocad\_lt:2002:sp1::de). The possible values of the \textbf{\{part\}} component are  h as hardware, o as operating system, and a as application. While the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value of the component as in the above example [edition=ANY]. 
+ The second binding representation, is the  formatted string binding  which is similar to the URI binding, but it has additional attributes, namely "target\_sw/hw" to represent target software and hardware, "sw\_edition" as software edition, "other" for extra attributes. It follows the syntax of  \textbf{cpe:2.3: "part":"vendor":
+ "product":"version":
+  "update":"edition":"lang":"s \newline w\_edition":"target\_sw":"
    target\_hw":"other"} (e.g., cpe:2.3:a:autodesk:
-   autocad\_lt:2002:sp1:*:de:*:*:*:*). The formatted string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. 
+   autocad\_lt:2002:sp1:*:
+   de:*:*:*:*). The formatted string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. 
   
   \par
   Figure 3 provides an example of CPE entry that contains the URI and formatted string bindings  representations, and the title and related references of the referenced product: 
@@ -145,7 +148,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
  
  \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity of the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST).
  
- \par CVSS entry consists set of different metrics. For example, access complexity, integrity impact, and access vector. The overall CVSS score value in the range from 0 to 10  is calculated using a formula that depends on the metrics values. An example of CVSS version 2 overall score and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) are shown in Figure 4.
+ \par CVSS entry consists set of different metrics. For example, access complexity, integrity impact, and access vector. The overall CVSS score value in the range from 0 to 10  is calculated using a formula that depends on the metrics values. Figure 4 shows an example of CVSS (version 2) score and  base metrics of "CVE-2014-3299" (presented in Section 3.1) vulnerability .
  
  \begin{figure}
     \centering
@@ -177,7 +180,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
 
 \par This section presents a system proposed by Takahashi et al. in \cite{paper1} to automatically monitor vulnerabilities of computing assets inside the IT infrastructure of an organization. Their main contribution is to automate the process of vulnerability management using open standards and repositories. The idea behind using open standards and information sources is to develop a system that can be used  by a wide range of organizations.
 \par
- First, the system collects information about the list of IT assets inside an organization. Afterward, the system stores the collected information and uses it to determine CPE-ID for each IT asset. Then, the system utilizes these identifiers to check the existence of related vulnerabilities, by querying the system's vulnerability knowledge base using the computed identifiers as keys. Finally, an alert about the identified vulnerable software will be sent to the system administrator.
+ First, the system collects information about the list of IT assets inside an organization. Afterward, the system stores the collected information and uses it to determine a CPE-ID for each IT asset. Then, the system utilizes these identifiers to check the existence of related vulnerabilities, by querying the system's vulnerability knowledge base using the computed identifiers as keys. Finally, an alert about the identified vulnerable software will be sent to the system administrator.
     
 \subsubsection {System Components }
 
@@ -258,13 +261,13 @@ The proposed system offers the functionality of monitoring certain software comp
 
 \section{Discussion}
 
-\par The system and technique proposed in Section 4.1 mainly focuses on the automation of software vulnerabilities management using open standards and public vulnerability repositories. The proposed system does not fully automate the process of software vulnerability monitoring, since in case of a new vulnerability is found, the system just sends an alert for the system's administrator who is responsible to perform the needed action manually. To deal with this drawback, the system can execute fast and immediate actions such as  blocking the corresponding terminal from accessing to the company's network, to prevent the attackers from exploiting the vulnerable software on that terminal. Furthermore, the accuracy of the system's outcome mainly depends on the precision of the determination of the IT assets identifiers (i.e, CPE-IDs). The proposed system finds the CPE-ID for an IT asset based on a numerical method of calculating a matching rate. According to the authors, this approach does not always deliver accurate results. In addition, the determined CPE-IDs must be validated by the system before moving to the further steps to avoid unnecessary processing or the generation of invalid alerts.
+\par The system proposed in Section 4.1 mainly focuses on the automation of software vulnerabilities management using open standards and public vulnerability repositories. The proposed system does not fully automate the process of software vulnerability monitoring, since in case of a new vulnerability is found, the system just sends an alert for the system's administrator who is responsible to perform the needed action manually. To deal with this drawback, the system can execute fast and immediate actions such as  blocking the corresponding terminal from accessing to the company's network, to prevent the attackers from exploiting the vulnerable software on that terminal. Furthermore, the accuracy of the system's outcome mainly depends on the precision of the determination of the IT assets identifiers (i.e, CPE-IDs). The proposed system finds the CPE-ID for an IT asset based on a numerical method of calculating a matching rate. According to the authors, this approach does not always deliver accurate results. In addition, the determined CPE-IDs must be validated by the system before moving to the further steps to avoid unnecessary processing or the generation of invalid alerts.
 
 
 \par The system outlined in Section 4.2 proposes a method to find vulnerable software based on information obtained from Twitter. The system analyzes the social media content to extract the security vulnerability information. This approach allows detecting zero-day vulnerabilities which is not feasible using classical channels such as NVD. On the other hand, this approach may utilize non- validated or wrong information to  identify security software vulnerabilities, this imposes the proposed system to contain a trust module of the extracted information from the social media data. Consequently, the accuracy of the system's output is  fundamentally affected by the strength of the trust model.
    
 \section{Conclusion}
-In this paper, we explore SCAP standards that related to software venerability management. And we present two approaches to implement software vulnerability management systems. First approach based on open standards (e.g., CPE, CVE) and open repositories (e.g., NVD). And the second one based on  security information obtained from social media.  
+In this paper, we explore SCAP standards that related to software venerability management. And we present two approaches to implement software vulnerability management systems. First approach based on open standards (e.g., CPE, CVE) and open repositories (e.g., NVD). And the second one based on  security information obtained from social media (Twitter).  
 \par The importance of the automatic detection and monitoring of vulnerable softwares inside organizations to avoid cyber-attacks introduces the need for software vulnerability management systems. The two approaches described in Section 4 allow the enterprises to get informed about software vulnerabilities of their IT assets. Nonetheless, they do not replace the normal security solutions and policies (e.g., firewalls) but they just support their goal to prevent attacks on the organization's IT infrastructure. The vulnerability repositories (e.g., NVD) and the open standards of the SCAP protocol (e.g., CPE, CVE) play the main role in developing software vulnerability management systems.   
 
 

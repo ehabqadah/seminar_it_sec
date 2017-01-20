@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  20 JAN 2017 20:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.20)  20 JAN 2017 21:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -296,22 +296,22 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 (./seminar_paper.aux)
 \openout1 = `seminar_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 10.
+Package hyperref Info: Link coloring OFF on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -321,9 +321,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
 
 (./seminar_paper.out) (./seminar_paper.out)
 \@outlinefile=\write3
@@ -360,13 +360,13 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 45.
+(Font)              <7> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 45.
+(Font)              <5> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 57.
+(Font)              <9> on input line 58.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 57.
+(Font)              <6> on input line 58.
 
 [1
 
@@ -374,7 +374,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <SVM.png, id=77, 725.71124pt x 410.53375pt>
 File: SVM.png Graphic file (type png)
  <use SVM.png>
-Package pdftex.def Info: SVM.png used on input line 72.
+Package pdftex.def Info: SVM.png used on input line 73.
 (pdftex.def)             Requested size: 277.69992pt x 219.64905pt.
  [2 <./SVM.png>]
 Missing character: There is no Â in font cmbx10!
@@ -386,27 +386,27 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 93.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 93.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 94.
 Missing character: There is no â in font cmbx10!
 Missing character: There is no „ in font cmbx10!
 Missing character: There is no ¢ in font cmbx10!
  [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 114.
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 115.
 
-Overfull \hbox (4.74405pt too wide) in paragraph at lines 112--119
+Overfull \hbox (4.74405pt too wide) in paragraph at lines 113--122
 \OT1/cmr/bx/n/10 cpe:/\OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 part\OMS/cmsy/b/n/10 g
 \OT1/cmr/bx/n/10 :\OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 vendor\OMS/cmsy/b/n/10 g\O
 T1/cmr/bx/n/10 :\OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 product\OMS/cmsy/b/n/10 g\OT
@@ -417,31 +417,37 @@ cmr/bx/n/10 :\OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 lang\OMS/cmsy/b/n/10 g
  []
 
 
-Overfull \hbox (2.10669pt too wide) in paragraph at lines 112--119
-\OT1/cmr/bx/n/10 "part":"vendor":"product":"version": "up-date":"edition":"lang
-":"sw 
+Overfull \hbox (1.94223pt too wide) in paragraph at lines 113--122
+\OT1/cmr/m/n/10 (e.g., cpe:/a:autodesk:autocad[]lt:2002:sp1::de). The pos-si-bl
+e val-ues of the \OMS/cmsy/b/n/10 f\OT1/cmr/bx/n/10 part\OMS/cmsy/b/n/10 g
+ []
+
+
+Overfull \hbox (1.79004pt too wide) in paragraph at lines 113--122
+\OT1/cmr/bx/n/10 w[]edition":"target[]sw":" tar-get[]hw":"other" \OT1/cmr/m/n/1
+0 (e.g., cpe:2.3:a:autodesk: au-
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 137.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 140.
 [4]
-Overfull \hbox (8.07764pt too wide) in paragraph at lines 160--161
+Overfull \hbox (8.07764pt too wide) in paragraph at lines 163--164
 [][][][][][][][][][][][][][][][] 
  []
 
 [5] [6]
-Overfull \hbox (0.61884pt too wide) in paragraph at lines 239--240
+Overfull \hbox (0.61884pt too wide) in paragraph at lines 242--243
 []\OT1/cmr/bx/n/10 Finding vul-ner-a-bil-ity in-for-ma-tion\OT1/cmr/m/n/10 : th
 e sys-tem uses the de-ter-mined CPE-
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 []\OT1/cmr/m/n/9 Symantec. In-ter-net Se-cu-rity Threat Re-port, Vol. 21
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 \OT1/cmr/m/n/9 https://www.symantec.com/content/dam/symantec/docs/reports/istr-
 21-
  []
@@ -462,24 +468,24 @@ Missing character: There is no â in font cmr9!
 Missing character: There is no € in font cmr9!
 Missing character: There is no ” in font cmr9!
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 306.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 306.
  (./seminar_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
 Package rerunfilecheck Info: File `seminar_paper.out' has not changed.
 (rerunfilecheck)             Checksum: C5B017C4BE05F76F59F8AF825AAD8CF4;1061.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 303.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 6927 strings out of 495028
- 101182 string characters out of 6181496
- 222085 words of memory out of 5000000
+ 6928 strings out of 495028
+ 101194 string characters out of 6181496
+ 222088 words of memory out of 5000000
  9976 multiletter control sequences out of 15000+600000
  7712 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 29i,9n,49p,1228b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,9n,49p,1214b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
@@ -491,10 +497,10 @@ public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on seminar_paper.pdf (10 pages, 207619 bytes).
+Output written on seminar_paper.pdf (10 pages, 207520 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 111 named destinations out of 1000 (max. 500000)
+ 304 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 112 named destinations out of 1000 (max. 500000)
  110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
