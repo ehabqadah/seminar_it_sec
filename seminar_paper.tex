@@ -64,13 +64,13 @@ On a daily basis, new security flaws are discovered in software applications. Th
 
 In this section, we shortly describe the concept of Software Vulnerability Management. Before doing this we define what a software vulnerability is. In the field of information technology, a vulnerability is a defect or weakness in a system that leads to a security incident or unauthorized access to information or services by attackers \cite{vuln}.  
 
-\par The Software Vulnerability Management concept can be defined as the process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets; gathering the IT assets information and store it. Then,  periodically search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities. Figure 1 shows the basic operations of the Software Vulnerability Management System.
+\par The Software Vulnerability Management concept can be defined as the continuous process of identifying vulnerabilities in a software product that is installed inside an organization. The process first requires managing the inventory of the organization's IT assets; gathering the IT assets information and store/update it. Then, search for the related vulnerabilities. In case of the discovery of a vulnerability, certain actions should be performed such as alerting the system's administrator or installing the corresponding patches to avoid possible threats based on those vulnerabilities. Figure 1 shows the basic operations of the Software Vulnerability Management System. Figure 1 shows the  basic process flow of the Software Vulnerability Management System.
 
 \begin{figure}
  
   \centering
-    \includegraphics[width=0.5\textwidth, height=0.4\textheight]{SVM.png}
-     \caption{Basic operations of Software Vulnerability Management System}
+    \includegraphics[width=.8\textwidth, height=.4\textheight]{SVM.png}
+     \caption{Process flow of the Software Vulnerability Management System}
 \end{figure}
 
 \section{Standards	Used	in	Software	Vulnerability	Management}
@@ -108,12 +108,17 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
        \end{figure}
  
  \subsection{Common Platform Enumeration (CPE™)}
- CPE\footnote{\url{https://cpe.mitre.org/specification/}} is the identifiers dictionary for the software products and applications, operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} is provided in XML format by NVD and it is updated frequently.
- \par The CPE ID format based on the generic syntax of Uniform Resource Identifiers (URI), it follows the structure of \textbf{cpe:/ \{part\}:\{vendor\}:\{product\}:
+ CPE\footnote{\url{https://cpe.mitre.org/cpe/}} is the identifiers dictionary for the software products and applications, operating systems and hardware devices. The official CPE dictionary (current version is 2.3) \footnote{The Official CPE Dictionary available at \url{https://nvd.nist.gov/cpe.cfm}} is provided in XML format by NVD and it is updated frequently.
+ \par The CPE naming specifications document \cite{cpe} defines two binding representations of the CPE-IDs. The first one, is formating the CPE-IDs based on the generic syntax of Uniform Resource Identifiers (URI), it follows the structure of \textbf{cpe:/\{part\}:\{vendor\}:\{product\}:
  \{version\}:
- \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/o:microsoft:windows\_2000:
- :sp4:pro:en-US). The \textbf{\{part\}} component is one of the following three values, h as hardware, o as operating system, and a as application, while the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value of the component as in the above example [version=ANY]. And  the new formatted string binding in version 2.3  is similar to the URI binding that based on the following syntax \textbf{cpe:2.3: "part":"vendor":"product":"version":
-  "update":"edition":"lang"} (e.g., cpe:2.3:o:microsoft:windows\_2000:*:sp4:pro:en-US), the new string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. Figure 3 provides an example of CPE entry that contains the URI and formatted string bindings values, and the title and related references of the described product: 
+ \{update\}:\{edition\}:\{lang\}} (e.g., cpe:/a:autodesk:autocad\_lt:2002:sp1::de). The \textbf{\{part\}} component is one of the following three values, h as hardware, o as operating system, and a as application, while the other attributes based on the product specification like the \textbf{\{vendor\}} component is filled with the name of the product's vendor. The unspecified attribute represents any value of the component as in the above example [edition=ANY]. 
+ The second binding representation, is the  formatted string binding  which is similar to the URI binding, but it has additional attributes, namely target\_sw/hw to represent target software and hardware, sw\_edition as software edition, other for extra attributes. It follows the syntax of  \textbf{cpe:2.3: "part":"vendor":"product":"version":
+  "update":"edition":"lang":"sw\newline \_edition":"target\_sw":"
+   target\_hw":"other"} (e.g., cpe:2.3:a:autodesk:
+   autocad\_lt:2002:sp1:*:de:*:*:*:*). The formatted string binding is just a simple formatted string starts with the  "cpe:2.3" prefix and uses the asterisks * to represent the any value of attribute. 
+  
+  \par
+  Figure 3 provides an example of CPE entry that contains the URI and formatted string bindings  representations, and the title and related references of the referenced product: 
   
   \begin{figure}
    
@@ -140,7 +145,7 @@ In this section, we shortly describe the concept of Software Vulnerability Manag
  
  \par CVSS\footnote{\url{https://www.first.org/cvss/specification-document}} is a scoring system of the software  vulnerabilities, which provides the characteristics and relative severity of the vulnerability. CVSS is managed by the Forum of Incident Response and Security Teams (FIRST).
  
- \par CVSS entry consists set of different metrics. For example, access complexity, integrity impact, and access vector. The overall CVSS score value in the range from 0 to 10  is calculated using a formula that depends on the metrics. An example of CVSS version 2 overall score and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) are shown in Figure 4.
+ \par CVSS entry consists set of different metrics. For example, access complexity, integrity impact, and access vector. The overall CVSS score value in the range from 0 to 10  is calculated using a formula that depends on the metrics values. An example of CVSS version 2 overall score and  base metrics of "CVE-2014-3299" vulnerability (presented in Section 3.1) are shown in Figure 4.
  
  \begin{figure}
     \centering
@@ -260,7 +265,7 @@ The proposed system offers the functionality of monitoring certain software comp
    
 \section{Conclusion}
 In this paper, we explore SCAP standards that related to software venerability management. And we present two approaches to implement software vulnerability management systems. First approach based on open standards (e.g., CPE, CVE) and open repositories (e.g., NVD). And the second one based on  security information obtained from social media.  
-\par The importance of the automatic detection and monitoring of vulnerable softwares inside organizations to avoid cyber-attacks introduces the need for software vulnerability management systems. The two approaches described in Section 4 allow the enterprises to get informed about software vulnerabilities of their IT assets. Nonetheless, they do not replace the normal security solutions and policies (e.g., firewalls) but they just complete their goal to prevent attacks on the organization's IT infrastructure. The vulnerability repositories (e.g., NVD) and the open standards of the SCAP protocol (e.g., CPE, CVE) play the main role in developing software vulnerability management systems.   
+\par The importance of the automatic detection and monitoring of vulnerable softwares inside organizations to avoid cyber-attacks introduces the need for software vulnerability management systems. The two approaches described in Section 4 allow the enterprises to get informed about software vulnerabilities of their IT assets. Nonetheless, they do not replace the normal security solutions and policies (e.g., firewalls) but they just support their goal to prevent attacks on the organization's IT infrastructure. The vulnerability repositories (e.g., NVD) and the open standards of the SCAP protocol (e.g., CPE, CVE) play the main role in developing software vulnerability management systems.   
 
 
 
@@ -284,10 +289,13 @@ Security Content Automation Protocol (SCAP)
 NIST Special Publication 800-126
 Revision 3.
 
-\bibitem[4]{paper1}
+\bibitem[4]{cpe}
+Common Platform Enumeration: Naming Specification Version 2.3 –Brant A. Cheikes, David Waltermire, Karen Scarfone, Brant A. Cheikes, David Waltermire, Karen Scarfone, Rebecca M. Blank, Acting Secretary — 2011 — NIST Interagency Report 7695, NIST-IR-7695
+
+\bibitem[5]{paper1}
 Takahashi, Takeshi, Daisuke Miyamoto, and Koji Nakao. "Toward automated vulnerability monitoring using open information and standardized tools." 2016 IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom Workshops). IEEE, 2016.
 
-\bibitem[5]{paper2}
+\bibitem[6]{paper2}
 Trabelsi, Slim, et al. "Mining social networks for software vulnerabilities monitoring." 2015 7th International Conference on New Technologies, Mobility and Security (NTMS). IEEE, 2015.
 %
 \end{thebibliography}
